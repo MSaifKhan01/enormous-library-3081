@@ -1,6 +1,10 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../connection/connection");
 
+
+
+
+
 const AvailabilityModel = sequelize.define(
   "Availability",
   {

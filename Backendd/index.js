@@ -8,10 +8,11 @@ const { DoctorModel } = require("./Model/Doctor");
 const { AvailabilityModel } = require("./Model/Availability");
 
 const app = express();
-app.use(express.json());
+app.use(cookieParser());
+// app.use(express.json());
 
 app.use(express.json())
-app.use(cookieParser());
+
 // app.use(auth);
 app.use("/user", userRegister); // for Register
 app.use("/user", userrouter ); // login & logout
