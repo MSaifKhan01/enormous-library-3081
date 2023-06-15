@@ -17,7 +17,7 @@ io.on("connection", (socket) => {
 
     socket.emit(
       "message",
-      formateMessage("Mirror Mate", "Welcome to Mirror Mate")
+      formateMessage("Welcome", "Welcome")
     );
     socket.emit("roomname", room);
 
@@ -25,7 +25,7 @@ io.on("connection", (socket) => {
       .to(user.room)
       .emit(
         "message",
-        formateMessage("Mirror Mate", `${username} has joined the chat`)
+        formateMessage("Welcome", `${username} has joined the chat`)
       );
 
     io.to(user.room).emit("allusers", getRoomUsers(room));
@@ -47,7 +47,7 @@ io.on("connection", (socket) => {
 
     io.to(user.room).emit(
       "message",
-      formateMessage("Mirror Mate", `${user.username} has left the chat`)
+      formateMessage("Welcome", `${user.username} has left the chat`)
     );
 
     io.to(user.room).emit("allusers", {
