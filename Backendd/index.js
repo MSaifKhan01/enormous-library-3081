@@ -1,6 +1,7 @@
 const express = require("express");
 const { userRegister } = require("./Router/Signup");
 const { userrouter } = require("./Router/login&logout");
+const OauthRouter=require('./middleware/Oauth')
 const cookieParser = require('cookie-parser');
 const { sequelize } = require("./connection/connection");
 const { AppointmentModle } = require("./Model/Appointment");
@@ -12,6 +13,12 @@ app.use(cookieParser());
 // app.use(express.json());
 
 app.use(express.json())
+
+app.get("/login",(req,res)=>{
+    res.sendFile(__dirname+"/index.html")
+    
+})
+app.use("/auth",OauthRouter)
 
 // app.use(auth);
 app.use("/user", userRegister); // for Register
