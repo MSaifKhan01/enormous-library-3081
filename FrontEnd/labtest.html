@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+    rel="shortcut icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOcAAACrCAMAAACqsHsFAAAAnFBMVEX////8txYAfJ3/6bX/6rn+1HT93pb+3ZD8yE7h8PTY6/GNxdT924v0+vuo097u9/n8wTifztv8y1lpssb++/T92YT94qL91Xl/vs5ZqsD8zmAThqX+7srJ5Ov8vSv+8dIwlbAejKm83eZMpLt2ucs/nbb+9eH++ez8xUb+/fj94Z/Z7PGHwtFir8PA3+dQprz90Wv+7MP+6Lb+8NCjDkW4AAAJt0lEQVR4nO2d60LiOhSFEQcFFEHxAlYqt4oKKs68/7udw7Q7Wbm1aUmkZbp+OW0T8iXZe+fWTqMhKGjGChrOdJVk2f3/717y94W77PcqU7N55TzPMnEuGOeXszxLyNlvcvVdZVpCzgvgvHaVaQk5p8A5dZVp+TgnTdTaUa7l41wKnEtHuZaPMxA4Z45yLR0nFYisdG56sL+edIz3upO16KqzOXudSdeZe8/WV1yGoJsU5oPf6o9i/f/nejmLa2OjsK43UZLF1zUvdzpn/3qcdKNoNPFJx3+R4SUNGvTYvU5yr9HYoAX3MP16jL0+WBJpGmdvI9jK4idIKXjOGQsPoYxTYGlOoUmvm5KCz0zO7kxONPLPmbTijFNFCudGKtaUdc+hXGJWT2bOeaCmGfcafkVWueTITdZcHbVAYlXIFRBrnsrZ1WA2m0PPnBQ8dyZCXXij45wOR8uI/StuszkHX46GbFgVdFI4+6zT7nLkMwhnA069ksqdIRYLoZwziCdsEypk7KyILIp7wCfd/UjhHFEOcfzqfAk5+hKVJnYE1F7k/xhnQEGVtcY1JGYG3aG7HSNnP6nYoEuJxvymP1FtxqNa6rhkLIyTl+ET2KhauPudJ1eWRk76Cd5Ne9ilPImC51Tkoj7E/g3DFuqrPVZ6nJvPWH4GzoWaI7kI42Brf13wAvwVtdCVyDnWJJkwEhwoUpn7Js5AzZFcvrs1G0VyJKGovxA50Rd22TXyKOhA5oxdz9nV5EjsrmZKquhXmSNhKyh9gRNbjMo8ojFCoMvxysD5qcmRattfCKVeNh2TAlYi5BTGnwGVKnGUU7zZZ+n1nFe6HBNrwb7sVtqRCRSeOIU1hsTVfJBLETgbSYqNgfNal2Pi9Be+MOdGzLh4Ge35Ef8hxANu0XrOuS7HiGrOkyh46rTEUqMnpJ45Yr0es5ywFHrOiSZH6iG+7BOXbRUJA8ENpOIekyIMxj1uf3rODvuLiwYK+Csuhcu2qubAOYVUFE0mrG2wzLQ4YRwnzNQcdXHYpSh4fg1RdHUMnGhOM0ZClgplpi6yMHIO4XIimrN4GshTB5QmClS+3ciMcXKXTw5zN9j7UBqCTPbayDlXcqRuETX8iMokuTmyll1Z+byMFjbYMsmObU1VMpHu7ozbNC+j/kLWuKY5zqcnTspfNguaJ0XCPDua93aLfvTP6d9HqUGby108/GSrSDhpkzmpQZuLXY6dEVWrr+ak31O2dtlm6FpaN8FRRVz5/Zn27hdmo6ybDLVpAl+zFap8JWqxjjvi87KmJEqkXeuZ9VM5e5EmjTdny4KnahZUAzM+upGKBk5EWaJsRvEcwLze11PHJ4EvTBY8NbP4OasCxtkXQHEC1V80RdEqdto69UbqBpGrTTpV5PY0kz7WcT9g/nnNGi6SVs8nQBoMmZml7jv0l0AaeWvM3S8l0gXnHt0U5tmfy3H0tbzQ+IvefPTxFY2HG6EGkjzwb/yxycVwHC0+lle+V6gtpFtPOEbVnMelf57z7eXp92n59OvPi0PO1fvNSXn1eL9ywrm6OzRJlsLz2/05T8NDY1gofNqX8/LQCJa634+z9H2W6X0fzvtDlz6Hvotzvhy67HkU5nC7EufjocueSw9FOZ8OXfKcsh8ziJytQxc8py4LclYhcqJei3FWrdvm6LgCZ5WCSizr0CJwnh+62Ll1asvZT3bz/659Phy62Ll1ZsspqGru9uTkvBKc+7v3anA2zvbNoeasOWtOX6o5bVVz1pw1JygctB9b25tXJzPVsnK2z5/Zsy/3jzasbdRAukmcg7aVNL/ng7MlT2pvzzJJ74QE8hI4cVouOWsW6dxzbnVT97eMGWtbfLwCnKaiPKU1aSjVTek5U3ZtVq9mzl/Ss6XnTNucWsnehelOfrTsnOnleDF03bbyZMk5txnJ9MuEsnE2Ss+ZuUiq7bm/1efKzSns1tx+n23brTNx3fRXVqpKcOLu2xM1XVtoZNVCX99ycIYDk7A+3zVlc8iJexg4HsWgsZUTaYwzhdMobGjtRrtDTtiTehZQ4MjHbzkRGCfUR17OTEyXnBA728INsEB5GxxufUN4ycmJEIZjEw45eQ+UttOgQ99Kd7hxrsLCnBjOTA865ORlluMkuBrBEaFxtk+KcrYhe8UuPHDy23LfAUcsXIdNrMuTopx4yOLZ+JQXTjl+8TsrvNzi179PCnNCRFmZ50QOOblblaIH2CdarmCchTlxDtA2PuWSky+VSMWEvUe0XDDOv4c+C3HiMCPNiF2OE24et9vWw93lmdieGD/BcsE448WGQpxQWWbjdMtpEo6H+EAejDPpzEU4YWzyljKP/wlOHKucsqsDyTiLcYbQa9PPVfrmDIUDELzKuTE36ER2AU7IPOPAoWdOcbbyza5DIzOE/Jy4EJFx4NArZyiefL1l1gkjNR5p8nP+0WXz85wt6Tgoe2VgwD0whPbcnDiuTXVCXjlf/0iJ+KEjjXEW4YRsTnX3f4IzVJY4+CxfZ5wFOG8gc+OSqWdOucs23nhrPvKrglXl5YS4/K25/QOcA2W5+gXsh49Ib4VmyMk5gOyzXxbywfmgLG39xokE53y/QcGI/JSupXCCL7c4rO+BU94saazE8a6yy2AWLT9oOA2j5h/jDJ/lh+UyuuGElaU3i31k15wDeZ3ySYlsbjjBBdicenbNKbXmSvOkE84QnrJ5ZdExp2Sb97oe5YRzqz70g5wiwrN+MOaEE2Yquk0bv5yh8LKlaW7shBN+yeoQu1NOnGveGidKLjhxRpY55nPNiSOUFOfgghOW1uze6HPJibPNAm+4QBvJp3AUTnDrul1Av5xonXctvVI6WY7xbd6o4pTzJjtdqtPIwYnmaXeA0CGn1aswbjhhUXR1YiUv6/HeOaFKLV/pc8hp9XKwG04IYJYOz8t+mXdO6DqWr/274xxkJ3PGCRN5yxfF3XGqp9e8cWKVWo2GXHI+ZidzxYkRzA7TIafdu/tOOFMOsPjn9KmyvgfgWjWnrWrOmrPm9KWa01Y1Z81Zc/pSzWmrmvO4OKvxXZ79Oa2/s3RQzue9P3KZ55OMh+PcX/k/hFtJTvvv2lWb0/47hdXmLPat6spx5tharjJnnu/CVpmzWFCpHGeu7zZXlzPfd7irypn3u+rV5AzPda+5Hxvn433e/w0gB2d7+3B5dvrr4HouGkyyOcPtu9VhjMpIy9mSX1ipvlTO9r6mUErJnK+FRxzllsipvnt0LBI4746xx8YCzsFxeVhRnPNur/FG2UWc6otkx6WEU32R7MjU+hcasxGfSW8dr5vlOm8d6cigVq1atTzqP9Um2iOTqMncAAAAAElFTkSuQmCC"
+  />
+    <title>
+        Book Lab Tests at Home from Apollo Diagnostics, Pathalogy Labs near me
+    </title>
+    <link rel="stylesheet" href="css/lab test.css" />
+    
+    
+</head>
+<body>
+    <div id="page">
+    
+
+       <div id="div2">
+        <div id="img">
+            <img src="https://newassets.apollo247.com/cms/2021-06/Premium_2400_web.jpg" alt="" height="100%" width="100%">
+        </div>
+
+        <div id="right">
+            <div class="pres">
+                <img src="https://newassets.apollo247.com/images/ic_prescriptiontest.png" alt="Rx" height="40px" width="35px">
+                <h3>Upload Prescription to place an order</h3>
+            </div>
+            <button>UPLOAD NOW</button>
+        </div>
+    </div>
+
+         <!-- POPULAR CATEGORIES(31)================ -->
+
+       <div id="category">
+        <h4 class="pop">POPULAR CATEGORIES(31)</h4>
+        <h4 class="viewall" id="thelastship">VIEW ALL</h4>
+       </div>
+
+       <div id="div3">
+        
+        <div>
+            <img src="https://newassets.apollo247.com/cms/2021-06/infection.png" alt="cat" height="50px" width="50px">
+            <p>Covid 19</p>
+        </div>
+        <div>
+            <img src="https://newassets.apollo247.com/cms/2021-07/Senior%20citizen.png" alt="cat" height="50px" width="50px">
+            <p>Senior Citizen</p>
+        </div>
+        <div>
+            <img src="https://newassets.apollo247.com/cms/2021-05/fever.png" alt="cat" height="50px" width="50px">
+            <p>Fever</p>
+        </div>
+        <div>
+            <img src="https://newassets.apollo247.com/cms/2021-05/diabetes_0.png" alt="cat" height="50px" width="50px">
+            <p>Diabetes</p>
+        </div>
+        <div>
+            <img src="https://newassets.apollo247.com/cms/2021-07/Women%20health_0.png" alt="cat" height="50px" width="50px">
+            <p> Women Health </p>
+        </div>
+        <div>
+            <img src="https://newassets.apollo247.com/cms/2021-05/anemia.png" alt="cat" height="50px" width="50px">
+            <p>Anemia</p>
+        </div>
+        <div>
+            <img src="https://newassets.apollo247.com/cms/2021-07/Full%20body.png" alt="cat" height="50px" width="50px">
+            <p>Full Body Che...</p>
+        </div>
+    </div>
+
+    <div id="div4">
+        <img src="https://newassets.apollo247.com/images/banners/pharma_2Feb.png" alt="">
+    </div>
+
+    <div id="healthCheackup">
+        <h4 class="pop">POPULAR HEALTH CHECKUP PACKAGE (84)</h4>
+        <h4 class="viewall" id="navtopopularcheck">VIEW ALL</h4>
+       </div>
+
+    <div id="div5"> </div>
+
+    <div id="div6">
+        <img src="https://newassets.apollo247.com/images/ic_workflow.png" alt="" height="50px" width="50px">
+        <span>3 simple steps to get a lab test done from the comfort of your home.</span>
+    </div>
+
+    <div id="tests">
+        <h4 class="pop">TOP BOOKED TESTS(16)</h4>
+        <h4 class="viewall" id="polars">VIEW ALL</h4>
+       </div>
+
+       <div id="div7"> </div>
+
+       <div id="diabetes">
+        <h4 class="pop">DIABETES SCREENING(27)</h4>
+        <h4 class="viewall" id="germanship">VIEW ALL</h4>
+       </div>
+
+       <div id="div8"></div>
+
+    <div id="booking">
+        <h4>WHY BOOK WITH US?</h4>
+       </div>
+
+    <div id="div9">
+        <div>
+            <img src="https://newassets.apollo247.com/images/ic_surface.png" alt="">
+            <h1>3.5</h1>
+            <p>Million tests every year</p>
+        </div>
+        <div>
+            <img src="https://newassets.apollo247.com/images/ic_legacy.png" alt="">
+            <h1>36</h1>
+            <p>Years of legacy</p>
+        </div>
+        <div>
+            <img src="https://newassets.apollo247.com/images/ic_laboratories.png" alt="">
+            <h1>100+</h1>
+            <p>Laboratories</p>
+        </div>
+        <div>
+            <img src="https://newassets.apollo247.com/images/ic_cities.png" alt="">
+            <h1>30+ <small>cities & </small></h1> <h1>700+ <small>collection centres</small></h1> 
+            <p></p>
+        </div>
+    </div>
+    <div id="lastdiv">
+        <div id="div19">
+            <div id="organs">
+                <div>
+                   <h4 class="pop">WOMEN CARE (8)</h4>
+                   <h4 class="viewall"> VIEW ALL </h4>
+                </div>
+            </div>
+            <div id="vitalorgan">
+           
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-07/Full%20body.png" alt="">
+                    <p>Full Body Ch...</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/kidney.png" alt="">
+                    <p>Kidney</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/heart.png" alt="">
+                    <p>Heart</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/jointpain_0.png" alt="">
+                    <p>Joint Pain</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/thyroid.png" alt="">
+                    <p>Thyroid</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/liver.png" alt="">
+                    <p>Liver</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/bone.png" alt="">
+                    <p>Bone</p>
+                </div>
+                <div>
+                    <img src="https://newassets.apollo247.com/cms/2021-05/lungs.png" alt="">
+                    <p>Lungs</p>
+                </div>
+            </div>
+        </div>
+        <div id="div20">
+            <div id="care">
+                <div> 
+                    <h4 class="pop">VITAL ORGANS (8)</h4>
+                    <h4 class="viewall"> VIEW ALL </h4>
+                 </div>
+            </div>
+            <div id="womencare">
+                <div id="upper">
+                    <div>
+                        <img src="https://newassets.apollo247.com/cms/2021-05/anemia.png" alt="">
+                        <p>Anemia</p>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/cms/2021-05/pregnancy.png" alt="">
+                        <p>Pregnancy</p>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/cms/2021-06/IRON%20STUDIES.png" alt="">
+                        <p>Iron Studies</p>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/cms/2021-05/vitamin%20deficiency.png" alt="">
+                        <p>Vitamin Defic..</p>
+                    </div>
+                </div>
+                <div id="lower">
+                         <div>
+                            <img src="https://newassets.apollo247.com/cms/2021-10/Women%20wellness%20(1).jpg" alt="">
+                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wellness">
+        <h4 class="pop">WOMEN WELLNESS(18)</h4>
+        <h4 class="viewall" id="spanishers">VIEW ALL</h4>
+       </div>
+
+       <div id="div10"></div>
+
+       <!-- paragraphs========================== -->
+
+       <div id="div11">
+        <h3>One-Stop Solution to Your Diagnostic Needs!</h3>
+        <p>Apollo Diagnostics is one of the most trusted, one-stop solutions for all complex pathology tests. We believe that the accurate diagnosis of a health issue is vital for
+           further treatment, and the results of lab tests are the backbone for an effective treatment plan. You should keep track of your health by booking a test online and
+           getting yourself treated timely.</p>
+
+        <h3>Why Choose Apollo Diagnostics?</h3>
+        <p>We have been in the industry for 36 years now, delivering 3.5 million tests every year. With more than 100+ laboratories and 700+ collection centres, we have
+            earned a reputation for India's leading multinational chain of diagnostic centres. We aim to bring quality and affordable diagnostic solutions closer to people. From
+            150+ collection centres in 2015 to 700+ collection centres now, we have seen growth!</p>
+
+        <p>The benefits of choosing Apollo diagnostic:</p>
+        
+        <ul>
+            <li>
+                An effective network of collection centres and laboratories.
+            </li>
+            <li>
+                Top-notch quality accurate tests at affordable prices.
+            </li>
+            <li>
+                Priority access and best deals with Apollo Circle membership on lab tests.
+            </li>
+            <li>
+                An exquisite value system.
+            </li>
+            <li>
+                High-quality diagnostic services.
+            </li>
+            <li>
+                Rigid external & internal quality examination.
+            </li>
+            <li>
+                Continuous upgrade & addition of the latest technologies.
+            </li>
+            <li>
+                Easy and convenient online lab test b0oking.
+            </li>
+            <li>
+                Wide range of medical specialties and lab tests.
+            </li>
+        </ul>
+
+        <h3>Book a Pathology Lab Test with Apollo 2417</h3>
+        <p>We are here for you! Ensure good health and know the defense against health issues. We own a wide range of leading pathology labs. Book a Pathology Lab Test
+           near you with ease to get the test reports online. We have more than 100+ laboratories with top-notch quality equipment and provide multiple lab services to all
+           age groups.</p>
+        <p>Steps to book a lab test from the comfort of your home:</p>
+        <ul>
+            <li>
+                Book online - Select the package or test you want to book.
+            </li>
+            <li>
+                Choose home sample collection option - A qualified phlebotomist visits your home for sample collection at the selected slot time.
+            </li>
+            <li>
+                Get your blood test reports within 48 hours - download them from the app or website anytime, anywhere!
+            </li>
+        </ul>
+
+
+
+         <h3>Find Pathology Labs Nearby at Apollo 24|7</h3>
+         <p>Keep control of your health with timely medical check-ups from Apollo Diagnostics. We offer a wide range of laboratory services that deliver accurate diagnostic lab
+           test results. Browse the most trusted pathology labs here on Apollo 24|7.</p>
+
+           <h3>Book Lab Test with Home-Collection Facility</h3>
+            <p>Regular health check-ups are vital for a healthy life. Daily health check-ups help in detecting diseases at the earliest following a timely treatment. Diagnostic tests
+               are crucial for regular health check-ups. Due to a busy schedule, it is possible to forget daily health checks. Apollo 24|7 provides blood sample testing at your
+               doorstep conveniently. We offer home collections for blood tests by qualifñed and trained phlebotomists. The blood sample collection process from home is
+               convenient and saves a lot of time. Book lab tests at home and utilise the home collection facility with Apollo Diagnostics.
+            </p>
+
+            <h3>Fast and Accurate Test Reports</h3>
+             <p>We strive to offer the best test reports service possible. Even on hectic working days, we never fail to meet the fast test reports timelines. At Apollo Diagnostics, the
+                blood test reports will be made available to you without any delays. You can easily download them from the Apollo 24|7 app or website, anytime and anywhere. We
+                use the latest technologies to attain fast and accurate test reports.
+                </p>
+
+        <h3> A Broad Range of Lab Tests Under One Roof!</h3>
+        <p>We believe in timely, quality, and patient-friendly services. Routine tests and health check-ups are vital, so we make sure that we can meet your requirements. VWe
+           offer a wide range of lab tests | RT-PCR Test | Renal Profile Test (KFT, RFT)| Hemogram Test | Lipid Profile Test | Thyroid Profile Test (T3 T4 TSH)| D-Dimer
+           Test | Urine Culture Test| Complete Blood Count Test (CBC Test)| Widal Test | Liver Function Test (LFT) and more. Our main goal is to focus on the quality care
+           of patients. We believe, for good treatment and care, high-quality diagnostics are vital. At Apollo Diagnostics, all lab tests facilities are made available.</p>
+    </div>
+
+   
+
+     
+    </div>
+  </div>
+ 
+</body>
+</html>
+
+<script src="navlab.js"></script>
+<script>
+
+    var healthCheackup = [
+        {
+            title : "Special Health Package Premium",
+            inc : "TOTAL INCLUSIONS : 60",
+            line1 : "Hba1c, Glycated Hemoglobin",
+            line2 : "Estimated Average Glucose (Eag)",
+            line3 : "Vitamin D (25 - Oh Vitamin D) + 57 More",
+            extra : "+57 More",
+            MRP : "6530",
+            dis : "57% Off",
+            price : "2824",
+            save : "3706",
+        },
+
+        {
+            title : "Comprehensive Package - Women",
+            inc : "TOTAL INCLUSIONS : 63",
+            line1 : "Hba1c, Glycated Hemoglobin",
+            line2 : "Estimated Average Glucose (Eag)",
+            line3 : "Vitamin D (25 - Oh Vitamin D) + 57 More",
+            extra : "+60 More",
+            MRP : "6630",
+            dis : "65% Off",
+            price : "2352",
+            save : "4278",
+        },
+
+        {
+            title : "Comprehensive Package - Senior Citizen Women",
+            inc : "TOTAL INCLUSIONS : 63",
+            line1 : "Hba1c, Glycated Hemoglobin",
+            line2 : "Estimated Average Glucose (Eag)",
+            line3 : "Vitamin D (25 - Oh Vitamin D) + 57 More",
+            extra : "+60 More",
+            MRP : "9030",
+            dis : "48% Off",
+            price : "4705",
+            save : "4325",
+        },
+    ]
+
+    healthCheackup.map(function(elems){
+            var card4 = document.createElement("div");
+            card4.setAttribute("class", "cards");
+    
+             var name = document.createElement("p");
+             name.textContent = elems.title;
+             name.setAttribute("class", "typetitle");
+
+             var para = document.createElement("p");
+             para.textContent = elems.inc;
+             para.setAttribute("class", "typeinc");
+
+             var linee1 = document.createElement("p");
+             linee1.textContent = elems.line1;
+             linee1.setAttribute("class", "typeline");
+
+             var linee2 = document.createElement("p");
+             linee2.textContent = elems.line2;
+             linee2.setAttribute("class", "typeline");
+
+             var linee3 = document.createElement("p");
+             linee3.textContent = elems.line3;
+             linee3.setAttribute("class", "typeline");
+
+             var extraa = document.createElement("p");
+             extraa.textContent = elems.extra;
+             extraa.setAttribute("class", "typeex");
+
+             var horz = document.createElement("hr");
+             horz.setAttribute("class", "hor");
+
+             var mrp = document.createElement("p");
+             mrp.textContent = "MRP " + "Rs. " + elems.MRP;
+             mrp.setAttribute("class", "mrpp");
+
+             var disc = document.createElement("p");
+             disc.textContent = "Rs. " + elems.dis;
+             disc.setAttribute("class", "discount");
+
+             var price = document.createElement("p");
+             price.textContent = "Rs. " + elems.price;
+             price.setAttribute("class", "typeprice");
+
+             var sav = document.createElement("p");
+             sav.textContent = "Save " + "Rs. " + elems.save;
+             sav.setAttribute("class", "savings");
+
+             var but = document.createElement("p");
+             but.innerHTML = "ADD TO CART";
+             but.setAttribute("class", "button");
+             but.addEventListener("click", function(){
+                seaterof(elems)
+             })
+
+             card4.append(name, para, linee1, linee2, linee3, extraa, horz, mrp, disc, price, sav, but);
+             document.getElementById("div5").append(card4);
+    });
+
+    var tests = [
+        {
+            img : "https://newassets.apollo247.com/organs/virus.png",
+            title : "Covid 19 RTPCR With Home Collection",
+            parameter : "3 Parameters included",
+            price : "750",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "Complete Blood Count (CBC)",
+            parameter : "13 Parameters included",
+            price : "360",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "C-Reactive Protein (Qualitative)",
+            parameter : "1 Parameters included",
+            price : "490",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_thyroid.png",
+            title : "Thyroid Profile-Free (FT3, FT4,..",
+            parameter : "4 Parameters included",
+            price : "880",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_liver.png",
+            title : "Liver Function Test (LFT)",
+            parameter : "10 Parameters included",
+            price : "700",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "Complete Urine Examination",
+            parameter : "15 Parameters included",
+            price : "240",
+        },
+    ]
+        tests.map (function(elems){
+            var card = document.createElement("div");
+             card.setAttribute("class", "cards");
+             var image = document.createElement("img");
+             image.setAttribute("src", elems.img);
+             image.setAttribute("class", "imgg");
+             var name = document.createElement("p");
+             name.textContent = elems.title;
+             name.setAttribute("class", "typetitle");
+             var para = document.createElement("p");
+             para.textContent = elems.parameter;
+             para.setAttribute("class", "typepara");
+             var horz = document.createElement("hr");
+             horz.setAttribute("class", "hor")
+             var price = document.createElement("p");
+             price.textContent = "Rs. " + elems.price;
+             price.setAttribute("class", "typeprice");
+             var but = document.createElement("p");
+             but.innerHTML = "ADD TO CART";
+             but.setAttribute("class", "button");
+             but.addEventListener("click", function(){
+                seaterof(elems)
+             })
+             card.append(image, name, para, horz, price, but);
+             document.getElementById("div7").append(card);
+
+        });
+
+        var Diabetes = [
+        {
+            img : "https://newassets.apollo247.com/organs/ic_diabetes.png",
+            title : "Diabetes And Lipid Profile",
+            parameter : "8 Parameters included",
+            discount : "54% off",
+            MRP : "1770",
+            price : "750",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_diabetes.png",
+            title : "Diabetes Screening",
+            parameter : "2 Parameters included",
+            discount : "31% off",
+            MRP : "1770",
+            price : "360",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_diabetes.png",
+            title : "Diabetes Package Basic",
+            parameter : "17 Parameters included",
+            discount : "36% off",
+            MRP : "1770",
+            price : "490",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_diabetes.png",
+            title : "Diabetes Package Advance",
+            parameter : "38 Parameters included",
+            discount : "23% off",
+            MRP : "1770",
+            price : "880",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "Lipid Profile",
+            parameter : "6 Parameters included",
+            discount : "23% off",
+            MRP : "1770",
+            price : "700",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "HbA1c, Glycated Hemoglobin",
+            parameter : "2 Parameters included",
+            price : "240",
+        },
+    ]
+
+    Diabetes.map (function(elems){
+            var card2 = document.createElement("div");
+             card2.setAttribute("class", "cards");
+
+             var image = document.createElement("img");
+             image.setAttribute("src", elems.img);
+             image.setAttribute("class", "imgg");
+
+             var name = document.createElement("p");
+             name.textContent = elems.title;
+             name.setAttribute("class", "typetitle");
+
+             var para = document.createElement("p");
+             para.textContent = elems.parameter;
+             para.setAttribute("class", "typepara");
+
+             var horz = document.createElement("hr");
+             horz.setAttribute("class", "hor");
+
+             var dis = document.createElement("p");
+             dis.textContent = elems.discount;
+             dis.setAttribute("class", "disc");
+
+             var mrp = document.createElement("p");
+             mrp.textContent = "MRP  " + "Rs." + elems.MRP;
+             mrp.setAttribute("class", "mrpp");
+
+             var price = document.createElement("p");
+             price.textContent = "Rs. " + elems.price;
+             price.setAttribute("class", "typeprice");
+
+             var but = document.createElement("p");
+             but.innerHTML = "ADD TO CART";
+             but.setAttribute("class", "button");
+             but.addEventListener("click", function(){
+                seaterof(elems)
+             })
+
+             card2.append(image, name, para, horz, dis, mrp, price, but);
+             document.getElementById("div8").append(card2);
+
+        });
+
+
+        var wellness = [
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "Comprehensive Package - Women",
+            parameter : "63 Parameters included",
+            discount : "65% off",
+            MRP : "1770",
+            price : "750",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "Comprehensive Package - Senio...",
+            parameter : "63 Parameters included",
+            discount : "48% off",
+            MRP : "1770",
+            price : "360",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "Women Wellness Advance",
+            parameter : "26 Parameters included",
+            discount : "30% off",
+            MRP : "1770",
+            price : "490",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "Women Wellness Basic",
+            parameter : "26 Parameters included",
+            discount : "29% off",
+            MRP : "1770",
+            price : "880",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_thyroid.png",
+            title : "Thyroid Profile Free (FT3, FT4,.",
+            parameter : "4 Parameters included",
+            price : "700",
+        },
+        {
+            img : "https://newassets.apollo247.com/organs/ic_blood.png",
+            title : "Hemoglobin",
+            parameter : "1 Parameters included",
+            price : "240",
+        },
+    ]
+
+    wellness.map (function(elems){
+            var card3 = document.createElement("div");
+             card3.setAttribute("class", "cards");
+
+             var image = document.createElement("img");
+             image.setAttribute("src", elems.img);
+             image.setAttribute("class", "imgg");
+
+             var name = document.createElement("p");
+             name.textContent = elems.title;
+             name.setAttribute("class", "typetitle");
+
+             var para = document.createElement("p");
+             para.textContent = elems.parameter;
+             para.setAttribute("class", "typepara");
+
+             var horz = document.createElement("hr");
+             horz.setAttribute("class", "hor");
+
+             var dis = document.createElement("p");
+             dis.textContent = elems.discount;
+             dis.setAttribute("class", "disc");
+
+             var mrp = document.createElement("p");
+             mrp.textContent = "MRP  " + "Rs." + elems.MRP;
+             mrp.setAttribute("class", "mrpp");
+
+             var price = document.createElement("p");
+             price.textContent = "Rs. " + elems.price;
+             price.setAttribute("class", "typeprice");
+
+             var but = document.createElement("p");
+             but.innerHTML = "ADD TO CART";
+             but.setAttribute("class", "button");
+             but.addEventListener("click", function(){
+                seaterof(elems)
+             })
+
+             card3.append(image, name, para, horz, dis, mrp, price, but);
+             document.getElementById("div10").append(card3);
+
+        });
+
+        var  addedToCart = JSON.parse(localStorage.getItem("cartItemsadded")) || [];
+
+function seaterof(el){
+  var obj = {
+    name : el.title,
+    mrp : el.MRP,
+    price : el.price,
+    img : "https://newassets.apollo247.com/organs/virus.png"
+  }
+  addedToCart.push(obj);
+  localStorage.setItem("cartItemsadded",JSON.stringify(addedToCart));
+  cartCountupdate(addedToCart);
+}
+
+function cartCountupdate(addedToCart) {
+  document.querySelector("#cartcount").textContent = addedToCart.length;
+}
+</script>
