@@ -2,7 +2,7 @@
 <html lang="zxx" dir="ltr">
 <head>
    <meta charset="utf-8" />
-   <title>Medical</title>
+   <title>HealCare - One HealthCare Solution</title>
    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
    <!--Template style -->
    <link rel="stylesheet" type="text/css" href="css/animate.css" />
@@ -54,7 +54,7 @@
                                  Sat - Sun: 9:00 - 16:00</a>
                            </li>
                            <li>
-                              <a href="appoinment.html" class="home3-btn">Appoinment</a>
+                              <a href="#" class="home3-btn"><span id="username">Welcome to HealCare</span></a>
                            </li>
                            <li>
                               <a href="javascript:;" class="openBtn" onclick="openSearch()"><i
@@ -64,7 +64,7 @@
                         <div id="myOverlay" class="overlay">
                            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
                            <div class="overlay-content">
-                              <form action="/action_page.php">
+                              <form action="#">
                                  <input type="text" placeholder="Search.." name="search">
                                  <button type="submit"><i class="fas fa-search"></i></button>
                               </form>
@@ -618,7 +618,35 @@
       );
       wow.init();
    </script>
-
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/wow.js"></script>
+      <script src="js/jquery.magnific-popup.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/contact_form.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- custom js-->
+      <script>
+         wow = new WOW(
+            {
+               animateClass: 'animated',
+               offset: 100,
+               callback: function (box) {
+                  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+               }
+            }
+         );
+         wow.init();
+      </script>
+      <script>
+         function openSearch() {
+            document.getElementById("myOverlay").style.display = "block";
+         }
+   
+         function closeSearch() {
+            document.getElementById("myOverlay").style.display = "none";
+         }
+      </script>
 </body>
 
 </html>
