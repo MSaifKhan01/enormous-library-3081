@@ -9906,3 +9906,29 @@ ul {
     /* width: 300%; */
   }
 }
+
+  .doctorFilter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px;
+  }
+
+  @media (max-width: 768px) {
+    .doctorFilter {
+      flex-wrap: wrap;
+    }
+
+    select {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
