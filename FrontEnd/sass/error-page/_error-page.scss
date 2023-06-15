@@ -1,0 +1,24 @@
+.Error-page-main-wrapper {
+	background-image: url('../images/bg-404.png');
+	background-repeat: no-repeat;
+	width: $my-width;
+	background-position-x: center;
+	position: relative;
+	.sb-error-section {
+		padding: 50px 0px;
+	}
+	.sb-error-content {
+		text-align: $align-center;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: 75px;
+		h2 {
+			font-size: 50px;
+			font-weight: 700;
+		}
+		p{
+			color: $title-color-white;
+		}
+	}
+}

@@ -1,0 +1,318 @@
+.service-main-page-wrapper {
+	.mt-25 {
+		margin-top: 30px;
+	}
+	.mb-25 {
+		margin-bottom: 25px;
+	}
+	.slider-change-icon {
+		display: flex;
+		column-count: 4;
+		column-gap: 15px;
+		button {
+			padding: 0;
+			width: 100%;
+			border: none;
+			margin-top: 10px;
+		}
+		img {
+			border-radius: 7px;
+			width: $my-width;
+		}
+	}
+	.service-content {
+		padding: 30px;
+		background: $section-bg-color;
+		border-radius: 5px;
+		h6 {
+			font-size: $font-size-22;
+		}
+	}
+	.booking-main-sec {
+		.form-section {
+			h5 {
+				font-size: $font-size-22;
+			}
+			.list-img {
+				display: flex;
+				column-count: 4;
+				column-gap: 15px;
+				li {
+					width: $my-width;
+					position: relative;
+					label {
+						width: 100%;
+						a {
+							display: block;
+							text-align: center;
+							margin-top: 5px;
+						}
+						img {
+							width: $my-width;
+							border-radius: 7px;
+						}
+					}
+					input {
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+				}
+			}
+		}
+		section {
+			margin-bottom: 60px;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				border-top: 1px solid $border-color;
+				left: 0;
+				bottom: -30px;
+			}
+		}
+		.booking-info {
+			display: flex;
+			column-count: 4;
+			column-gap: 70px;
+			position: relative;
+			ul {
+				width: 100%;
+				li {
+					line-height: 35px;
+				}
+				.highlight {
+					color: #111;
+					font-weight: $font-weight1;
+					padding-top: 40px;
+					&.color {
+						color: $title-color-hover;
+					}
+				}
+			}
+			&.r-border {
+				&:before {
+					content: '';
+					position: absolute;
+					right: 35px;
+					top: 0;
+					width: 100%;
+					border-right: 1px solid #d4d4d4;
+					height: 100%;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					/* top: 0; */
+					width: 71%;
+					border-bottom: 1px solid #d4d4d4;
+					height: 100%;
+					bottom: 40px;
+				}
+			}
+		}
+		.form-group {
+			display: block;
+			margin-bottom: 15px;
+			label {
+				position: relative;
+				cursor: pointer;
+				&:before {
+					content: '';
+					-webkit-appearance: none;
+					background-color: #e8e7ec;
+					border: 2px solid #e8e7ec;
+					padding: 10px;
+					display: inline-block;
+					position: absolute;
+					vertical-align: middle;
+					cursor: pointer;
+					margin-right: 5px;
+					top: 10px;
+					right: 5px;
+					border-radius: 50px;
+				}
+			}
+			input {
+				&:checked+ {
+					label {
+						&:after {
+							content: '';
+							display: block;
+							position: absolute;
+							top: 14px;
+							right: 19px;
+							width: 7px;
+							height: 12px;
+							border: solid $title-color-white;
+							border-width: 0 3px 3px 0;
+							transform: rotate( 45deg);
+						}
+						&:before {
+							background-color: $title-color-hover;
+							border: 2px solid $title-color-hover;
+						}
+					}
+				}
+			}
+		}
+	}
+	/*--- slider ---*/
+	.servie-left-sidebar{
+		.slider-sec{
+			.carousel-inner{
+				.carousel-item{
+					img{
+						border-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+.right-section2 {
+	ul {
+		padding: 15px;
+		li {
+			line-height: 30px;
+		}
+	}
+	.accordion {
+		padding: 20px;
+		.accordion-item {
+			border: none;
+			background-color: $section-bg-color;
+			.accordion-header {
+				margin-bottom: 1px;
+				.accordion-button {
+					position: relative;
+					background-color: $section-bg-color;
+					&.collapsed {
+						border-bottom: 1px solid #d4d4d4;
+					}
+					&:before {
+						display: block;
+						position: absolute;
+						content: "";
+						top: 24px;
+						right: 16px;
+						width: 11px;
+						height: 1px;
+						background: $title-color-hover;
+					}
+					&:after {
+						display: block;
+						position: absolute;
+						content: "";
+						flex-shrink: 0;
+						top: 19px;
+						right: 21px;
+						width: 1px;
+						height: 11px;
+						background: $title-color-hover;
+						background-image: none;
+						transition: 0.2s ease all;
+					}
+					&:not(.collapsed)::after {
+						opacity: 0;
+						transform: none;
+					}
+					&:not(.collapsed) {
+						color: $title-color-hover;
+						box-shadow: none;
+					}
+					&:focus {
+						border: none;
+						outline: 0;
+						box-shadow: none;
+					}
+				}
+			}
+			.accordion-body {
+				ul {
+					li {
+						position: relative;
+						&:before {
+							content: '';
+							position: absolute;
+							left: -22px;
+							top: 50%;
+							width: 12px;
+							height: 12px;
+							border: 1px solid #4d4d4e;
+							border-radius: 50px;
+							transform: translateY(-50%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.social {
+	a {
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		font-size: $a-font-size;
+		display: inline-block;
+		line-height: 40px;
+		border-radius: 50%;
+		border: 1px solid #444;
+		margin-right: 20px;
+		-webkit-transition: $transition;
+		-o-transition: $transition;
+		-ms-transition: $transition;
+		-moz-transition: $transition;
+		transition: $transition;
+		.icon-color {
+			color: #444;
+			-webkit-transition: $transition;
+			-o-transition: $transition;
+			-ms-transition: $transition;
+			-moz-transition: $transition;
+			transition: $transition;
+			padding: 0 !important;
+		}
+		&:hover {
+			background-color: $title-color-hover;
+			border-color: $title-color-hover;
+			.icon-color {
+				color: $title-color-white;
+			}
+		}
+	}
+}
+
+// comments section scss
+.comment-section {
+	padding: 30px 0;
+	h5 {
+		font-size: 22px;
+		margin-bottom: 10px;
+		span {
+			color: $title-color-hover;
+			font-style: italic;
+			font-size: 20px;
+			padding-left: 10px;
+			a{
+				color: $title-color-hover;
+				text-decoration: underline;
+			}
+		}
+	}
+	.comment-border {
+		margin-bottom: 60px;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			border-top: 1px solid #d4d4d4;
+			left: 0;
+			bottom: -30px;
+		}
+	}
+}

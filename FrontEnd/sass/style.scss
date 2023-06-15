@@ -1,0 +1,203 @@
+/*-------------------------------------
+    
+	Author:  Webstrot
+	Copyright © 2022-23
+	
+
+---------------------------------------*/
+
+
+/*--------------
+1.Theme default CSS
+--------------------------*/
+
+$title-font: 'Roboto',
+sans-serif;
+$body-font: 'Lato',
+sans-serif;
+$body-color: #b0b2b3;
+$title-color: #222222;
+$section-bg-color:#ebf5f5;
+$title-color-white: #fff;
+$title-color-hover: #e12454;
+$font-size:16px;
+$line-height:25px;
+$transition: all 0.5s;
+
+/* ....................................
+1.1 Common CSS 
+.......................................*/
+
+@import 'common/common';
+
+/* ....................................
+1.1 Header CSS 
+.......................................*/
+
+@import 'header/header';
+
+/* ....................................
+1.1 INDEX 01 CSS 
+.......................................*/
+
+@import 'home1/home1';
+
+/* ....................................
+1.1 Contact CSS 
+.......................................*/
+
+@import 'contact/contact';
+
+/*1.1 Footer CSS 
+.......................................*/
+
+@import 'footer/footer';
+
+/*1.1 INDEX 02 CSS 
+.......................................*/
+
+@import 'home2/home2';
+
+/*1.1 INDEX 03 CSS 
+.......................................*/
+
+@import 'home3/home3';
+
+/*1.1 gallery
+.......................................*/
+
+@import 'gallery/gallery';
+
+/*1.1 About 
+.......................................*/
+
+@import 'about-us/about-us';
+
+/*1.1 Service-details
+.......................................*/
+
+@import 'service-details/service-details';
+
+/*1.1 service page
+.......................................*/
+
+@import 'service-page/service-page';
+
+/*1.1 blog page
+.......................................*/
+
+@import 'blog-page/blog-page';
+
+/*1.1 error page page
+.......................................*/
+
+@import 'error-page/error-page';
+
+/*1.1 shortcode page
+.......................................*/
+
+@import 'shortcode/shortcode';
+/*1.1 login page
+.......................................*/
+
+@import 'login/login';
+// manu fixed css
+.menu-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $title-color-hover;
+	z-index: 10000;
+	-o-box-shadow: 0px 0px 25px -10px;
+	-ms-box-shadow: 0px 0px 25px -10px;
+	-moz-box-shadow: 0px 0px 25px -10px;
+	-webkit-box-shadow: 0px 0px 25px -10px;
+	box-shadow: 0px 0px 15px -15px;
+}
+
+// return to top
+#return-to-top {
+	position: fixed;
+	bottom: 43px;
+	right: 30px;
+	display: block;
+	display: none;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	background: $title-color-hover;
+	// box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+	-webkit-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	z-index: 999;
+	color: $title-color-white;
+	-webkit-animation: jump 1s ease-in alternate infinite;
+	animation: jump 1s ease-in alternate infinite;
+}
+
+#return-to-top i {  
+	color: #fff;
+	line-height: 50px;
+	font-size: 20px;
+	-webkit-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#return-to-top:hover i {
+	color: #fff;
+	top: 5px;
+}
+.change-bg1{
+	background: $bg-color2 !important;
+}
+.change-bg2{
+	background: $section-bg-color3 !important;
+}
+@-webkit-keyframes jump {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 50%, 0);
+	}
+}
+
+@keyframes jump {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 50%, 0);
+	}
+}
+
+// cross btn js
+#toggle_close {
+	position: absolute;
+	z-index: 100;
+	right: 10px;
+	top: 30px;
+	font-size: 25px;
+	color: $border-color;
+	cursor: pointer;
+	height: 25px;
+	width: 25px;
+	text-align: center;
+	border-radius: 50px;
+}
