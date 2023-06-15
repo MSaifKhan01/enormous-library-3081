@@ -3493,9 +3493,6 @@ section:hover .hover-type a {
 
 /*1.1 Service-details
 .......................................*/
-.service-main-page-wrapper {
-  /*--- slider ---*/
-}
 
 .service-main-page-wrapper .mt-25 {
   margin-top: 30px;
@@ -3641,7 +3638,6 @@ section:hover .hover-type a {
 
 .service-main-page-wrapper .booking-main-sec .form-group label:before {
   content: '';
-  -webkit-appearance: none;
   background-color: #e8e7ec;
   border: 2px solid #e8e7ec;
   padding: 10px;
@@ -4577,10 +4573,6 @@ ul {
   font-weight: 600;
   padding: 12px 32px;
   text-decoration: none;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -moz-transition: all 0.5s;
 }
 
 .button2-wrapper .btn2:hover {
@@ -4617,10 +4609,6 @@ ul {
   font-weight: 600;
   padding: 12px 32px;
   text-decoration: none;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -moz-transition: all 0.5s;
 }
 
 .button3-wrapper .btn3:hover {
@@ -4680,10 +4668,6 @@ ul {
   font-weight: 600;
   padding: 12px 32px;
   text-decoration: none;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -moz-transition: all 0.5s;
 }
 
 .button4-wrapper .btn4:hover {
@@ -5114,7 +5098,6 @@ ul {
   position: relative;
   border: 0;
   background: linear-gradient(to right, #b783ff, #b783ff, #fa7cc1, #ff85a6, #ff9393);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -5160,10 +5143,6 @@ ul {
   font-weight: 600;
   padding: 12px 32px;
   text-decoration: none;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -moz-transition: all 0.5s;
 }
 
 .button11-wrapper .btn11:hover {
@@ -6434,7 +6413,6 @@ ul {
 
 .testimonial-one-wrapper .testimonial-one .test-content .test-icon i {
   background: linear-gradient(to right, #b783ff, #b783ff, #fa7cc1, #ff85a6, #ff9393);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 25px;
 }
@@ -9609,7 +9587,6 @@ ul {
 .list-main-wrapper-three .list-three-wrapper ul li i {
   margin-right: 10px;
   background: linear-gradient(to right, #556fff, #556fff, #e05fc4, #f767a6, #ff798e);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 18px;
 }
