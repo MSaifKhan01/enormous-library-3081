@@ -1,0 +1,317 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#nav {
+  border: 1px dotted black;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+#container {
+  /* border: 1px dotted black; */
+  width: 100%;
+  height: 650px;
+  border-radius: 10px;
+  background-color: #e7ded1;
+  padding-bottom: 50px;
+}
+
+#wrapper {
+  width: 90%;
+  border-radius: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 30px;
+}
+
+#left-contaier {
+  border-right: 1px dotted black;
+  border-radius: 10px 0px 0px 10px;
+  width: 20%;
+  height: 650px;
+  background-color: #ffffff;
+  float: left;
+  text-align: center;
+  align-items: center;
+}
+
+#middle-contaier {
+  width: 59%;
+  height: 650px;
+  background-color: #ffffff;
+  float: left;
+}
+
+#right-contaier {
+  /* border-right: 1px dotted blue; */
+  border-radius: 0px 10px 10px 0px;
+  width: 20%;
+  height: 650px;
+  background-color: #f9f4ed;
+  float: left;
+}
+
+.icon-list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 70px;
+  margin-top: 70px;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Optional: add spacing between each list item */
+}
+
+.icon-list li i,
+.icon-list li a {
+  margin-right: 5px;
+  color: gray;
+  margin-top: 20px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.icon-list li:hover i,
+.icon-list li:hover a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.doc-img {
+  padding-top: 30px;
+  border-radius: 50%;
+  width: 50%;
+  padding-bottom: 10px;
+}
+
+.icon-email {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+.icon-email i {
+  margin-right: 10px;
+  color: gray;
+}
+
+.icon-email h5 {
+  margin: 0;
+  color: gray;
+}
+
+/* middle container */
+#middle-hello-container {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#middle-hello-container > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+}
+
+#middle-hello-container h1 {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+#middle-hello-container p {
+  color: gray;
+  font-weight: 900;
+}
+
+#middle-hello-container i {
+  font-size: 20px;
+  margin-right: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#middle-hello-container button {
+  padding: 10px 20px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+}
+
+#card-section {
+  width: 90%;
+  display: grid;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-template-columns: repeat(3,1fr); */
+  gap: 10px;
+}
+
+.card {
+  /* border: 1px solid red; */
+  height: 300px;
+  background-color: #f2f8fd;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.image-div {
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.name-info {
+  text-align: start;
+  width: 100%;
+}
+
+.image-left img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10%;
+}
+
+.image-left p {
+  color: gray;
+  font-size: small;
+}
+.image-left h {
+  color: black;
+}
+
+.menu {
+  margin-top: 8px;
+  font-size: larger;
+  font-weight: bolder;
+  padding-right: 20px;
+}
+
+.InfoImg {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+.image-left {
+  padding-left: 20px;
+}
+
+.InfoImgMid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.InfoImgMid p {
+  color: gray;
+  font-size: small;
+  font-weight: bold;
+}
+
+.InfoImgbottom img {
+  width: 6%;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.InfoImgbottom h4 {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.InfoImgbottom h4 p {
+  margin-left: 10px;
+}
+
+#right-wrapper {
+  width: 90%;
+  margin: 5% 5%;
+  margin-top: 50px;
+}
+
+#calendar {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+#Dates {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+#Dates p {
+  color: gray;
+  font-weight: bold;
+}
+
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  display: table;
+}
+
+.patient-table th,
+.patient-table td {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.patient-table th {
+  background-color: #f2f2f2;
+}
+
+.patient-table td button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.patient-table td button:hover {
+  background-color: #45a049;
+}

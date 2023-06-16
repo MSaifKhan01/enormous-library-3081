@@ -3,10 +3,10 @@ const { AvailabilityModel } = require("../Model/Availability");
 const { DoctorModel } = require("../Model/Doctor");
 const availabilityRouter = express.Router();
 
-
 // this form is only for existing doctor who can create a available time for users
-availabilityRouter.post("/add", async (req, res) => {
-  const { doctorId, availableTime } = req.body;
+availabilityRouter.post("/addtimeSlot/:doctorId", async (req, res) => {
+  const doctorId = req.params.doctorId;
+  const { availableTime } = req.body;
 
   try {
     const doctor = await DoctorModel.findOne({
@@ -33,5 +33,5 @@ availabilityRouter.post("/add", async (req, res) => {
 });
 
 module.exports = {
-    availabilityRouter
-}
+  availabilityRouter,
+};
