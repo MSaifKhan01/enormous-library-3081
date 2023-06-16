@@ -326,12 +326,12 @@
    <!-- header end -->
    <!-- contact us page start -->
    <!-- form section start -->
-   <div class="form-main-wrapper">
+   <!-- <div class="form-main-wrapper">
       <div class="container">
          <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                <div class="form-section">
-                  <h6>Book an Appoinment</h6>
+                  <h6>Doctor Registration</h6>
                   <div class="form-input plr-15">
                      <div class="row ">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
@@ -347,30 +347,67 @@
                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                           <select class="my-width" style="width: 100%; margin-top: 15px;" id="gender" name="gender" required>
+                              <option value="" disabled selected>Gender*</option>
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                           </select>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="input-group flex-nowrap">
+                              <input type="text" class="form-control" placeholder="City">
+                              <span class="input-group-text"><i class="fas fa-city"></i></span>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="input-group flex-nowrap">
+                              <input type="text" class="form-control" placeholder="State">
+                              <span class="input-group-text"><i class="fas fa-city"></i></span>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="input-group flex-nowrap">
+                              <input type="text" class="form-control" placeholder="Language">
+                              <span class="input-group-text"><i class="fas fa-language"></i></span>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                            <div class="input-group flex-nowrap">
                               <input type="tel" class="form-control" placeholder="Phone">
                               <span class="input-group-text"><i class="fas fa-phone"></i></span>
                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                           <div class="input-group flex-nowrap input-custom">
-                              <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
-                              <span class="input-group-text"><i class="fas fa-calendar-minus"></i></span>
+                           <div class="input-group flex-nowrap">
+                              <input type="tel" class="form-control" placeholder="Experience">
+                              <span class="input-group-text"><i class="fas fa-pen"></i></span>
                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                            <div class="input-group flex-nowrap">
-                              <input type="time" class="form-control" />
+                              <input type="tel" class="form-control" placeholder="Degree">
+                              <span class="input-group-text"><i class="fas fa-pen"></i></span>
                            </div>
                         </div>
-
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="input-group flex-nowrap">
+                              <input type="tel" class="form-control" placeholder="Speciality">
+                              <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="input-group flex-nowrap">
+                              <input type="url" class="form-control" placeholder="Image link">
+                              <span class="input-group-text"><i class="fas fa-image"></i></span>
+                           </div>
+                        </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                            <textarea class="form-control ps-3" id="exampleFormControlTextarea1" rows="3"
-                              placeholder="Enter Text"></textarea>
+                              placeholder="About Doctor"></textarea>
                         </div>
                      </div>
                      <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                        <a href="javascript:;" class="button-btn mt-4">Submit
+                        <a href="javascript:;" class="button-btn mt-4">Request as Doctor
                            <span><i class="fas fa-angle-double-right"></i></span>
                         </a>
                      </div>
@@ -379,7 +416,101 @@
             </div>
          </div>
       </div>
+   </div> -->
+   <div class="form-main-wrapper">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+               <div class="form-section">
+                  <h6>Doctor Registration</h6>
+                  <form id="doctor-registration-form">
+                     <div class="form-input plr-15">
+                        <div class="row">
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <input type="text" class="form-control" id="name" placeholder="Name*" required>
+                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <input type="email" class="form-control" id="email" placeholder="Email*" required>
+                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <select class="my-width" style="width: 100%; margin-top: 15px;" id="gender" name="gender" required>
+                                 <option value="" disabled selected>Gender*</option>
+                                 <option value="male">Male</option>
+                                 <option value="female">Female</option>
+                              </select>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <input type="text" class="form-control" id="city" placeholder="City*" required>
+                                 <span class="input-group-text"><i class="fas fa-city"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <input type="text" class="form-control" id="state" placeholder="State*" required>
+                                 <span class="input-group-text"><i class="fas fa-city"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <input type="text" class="form-control" id="language" placeholder="Language*" required>
+                                 <span class="input-group-text"><i class="fas fa-language"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <input type="tel" class="form-control" id="phone" placeholder="Phone*" required>
+                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <input type="tel" class="form-control" id="experience" placeholder="Experience*" required>
+                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <input type="tel" class="form-control" id="degree" placeholder="Degree*" required>
+                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <input type="tel" class="form-control" id="speciality" placeholder="Speciality*" required>
+                                 <span class="input-group-text"><i class="fas fa-pen"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                              <div class="input-group flex-nowrap">
+                                 <!-- <input type="file" class="form-control" id="image" accept="image/jpeg, image/png, image/svg+xml" required> -->
+                                 <input type="text" class="form-control" placeholder="Image link" id="image">
+                              <span class="input-group-text"><i class="fas fa-image"></i></span>
+                              </div>
+                           </div>
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                              <textarea class="form-control ps-3" id="about" rows="3" placeholder="About Doctor" required></textarea>
+                           </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                           <button type="submit" class="button-btn mt-4">Request as Doctor
+                              <span><i class="fas fa-angle-double-right"></i></span>
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
+   
    <!-- footer section start -->
    <div class="footer-main-wrapper footer-main3">
       <div class="container">
@@ -604,7 +735,7 @@ $('select').each(function(){
 
 });
    </script>
-
+<script src="js/doctorRegistration.js"></script>
 </body>
 
 </html>
