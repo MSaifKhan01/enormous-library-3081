@@ -21,6 +21,8 @@ app.get("/login",(req,res)=>{
     res.sendFile(__dirname+"/index.html")
     
 })
+
+
 app.use("/auth",OauthRouter)
 
 app.use("/user", userRegister); // for Register
