@@ -3,10 +3,11 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { logoutModel } = require('../Model/logout');
 const { User } = require('../Model/User');
+const auth=require("../middleware/auth")
 const userrouter = express.Router();
 
 
-userrouter.post('/login', async (req, res) => {
+userrouter.post('/login',auth, async (req, res) => {
     const { email, password } = req.body
 
     const isUserPresent = await User.findOne({
