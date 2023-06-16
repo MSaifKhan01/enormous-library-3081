@@ -16,10 +16,15 @@ app.use(cookieParser());
 
 app.use(express.json())
 
+
 app.get("/login",(req,res)=>{
     res.sendFile(__dirname+"/index.html")
     
 })
+
+
+app.use("/auth",OauthRouter)
+
 app.use("/user", userRegister); // for Register
 app.use("/user", userrouter ); // login & logout
 // app.use("/auth",OauthRouter)  // Only use this Auth after login Route
