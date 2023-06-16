@@ -35,36 +35,45 @@
                      </div>
                      <div class="col-lg-6 col-md-12 col-12 p-0">
                         <div class="login-main">
-                           <form>
+                           <form id="registration-form">
                               <h4>Register Now</h4>
                               <p class="mb-3">Register by entering the information below</p>
                               <div class="mt-2">
-                                 <input type="text" class="my-width" placeholder="Name*">
+                                 <input type="text" class="my-width" placeholder="Name*" required>
+                              </div>
+                              <div class="mt-2" class="my-width" >
+                                 <select class="my-width" style="width: 100%; margin-top: 15px;" id="gender" name="gender" required>
+                                    <option value="" disabled selected>Gender*</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                 </select>
                               </div>
                               <div class="mt-2">
-                                 <input type="email" class="my-width" placeholder="Email*">
+                                 <input type="email" class="my-width" placeholder="Email*" required>
                               </div>
                               <div class="mt-2">
-                                 <input type="password" class="my-width" placeholder="Password*">
+                                 <input type="tel" class="my-width" placeholder="Mobile Number*" value="+91" pattern="[0-9]{10}" required>
                               </div>
                               <div class="mt-2">
-                                 <input type="password" class="my-width" placeholder="Confirm Password*">
+                                 <input type="password" class="my-width" placeholder="Password*" required>
                               </div>
                               <div class="mt-2">
-                                 <input type="checkbox" id="accept" class="me-2">
+                                 <input type="checkbox" id="accept" class="me-2" required>
                                  <label for="accept">Yes, I understand and agree <a href="javascript:;" class="text-color-pink">Terms & Conditions</a>.</label>
                               </div>
-                              <a href="javascript:;" class="button-btn mt-4 text-capitalize">Register
-                              <span><i class="fas fa-angle-double-right"></i></span>
-                              </a>
+                              <button type="submit" class="button-btn mt-4 text-capitalize">Register
+                                 <span><i class="fas fa-angle-double-right"></i></span>
+                              </button>
                               <p class="mt-2">Already have an Account. <a href="login.html" class="text-color-pink">Login Now</a></p>
                            </form>
                         </div>
                      </div>
-                  </div>
+                     
+                                     
                </div>
             </div>
             <!-- Side Panel -->
+            <script src="js/login.js"></script>
             <script src="js/jquery-3.6.0.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
             <script src="js/wow.js"></script>
