@@ -11,6 +11,7 @@ const DoctorModel = sequelize.define("Doctor", {
   Experience: DataTypes.INTEGER,
   Degree: DataTypes.STRING,
   Specialty: DataTypes.STRING,
+  About: DataTypes.STRING,
   approved: {
     type: DataTypes.BOOLEAN,
     defaultValue: false
