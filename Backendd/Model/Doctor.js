@@ -8,10 +8,11 @@ const DoctorModel = sequelize.define("Doctor", {
   City: DataTypes.STRING,
   State: DataTypes.STRING,
   Language: DataTypes.STRING,
-  Experience: DataTypes.INTEGER,
+  Experience: DataTypes.STRING,
   Degree: DataTypes.STRING,
   Specialty: DataTypes.STRING,
   About: DataTypes.STRING,
+  Image:DataTypes.STRING,
   approved: {
     type: DataTypes.BOOLEAN,
     defaultValue: false
