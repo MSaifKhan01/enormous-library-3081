@@ -213,7 +213,7 @@
                   <div class=" col-md-6 col-sm-6 col-6">
                      <div class="mobile-logo">
                         <a href="javascript:;">
-                           <img src="images/logo3.png" alt="img">
+                           <img src="images/logo-no-background.png" alt="img">
                         </a>
                      </div>
                   </div>
@@ -233,7 +233,7 @@
          </div>
          <div id="sidebar">
             <div class="sidebar_logo">
-               <a href="javascript:;"><img src="images/home3/logo4.png" alt="img"></a>
+               <a href="javascript:;"><img src="images/logo-no-background.png" alt="img"></a>
             </div>
             <div id="toggle_close">&times;</div>
             <div id='cssmenu'>
@@ -248,59 +248,8 @@
                   </li>
                   <li><a href="about-us.html">about</a></li>
                   <li><a href="all-dr.html">Doctors</a></li>
-                  <li><a href="dr-single.html">Doctor Single</a></li>
-                  <li><a href="appoinment.html">Appointment</a></li>
-                  <li class="has-sub">
-                     <a href="javascript:;">Services</a>
-                     <ul>
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="single-details.html">Service Details</a></li>
-                     </ul>
-                  </li>
-                  <li class="has-sub">
-                     <a href="javascript:;">Gallery</a>
-                     <ul>
-                        <li><a href="gallery.html">3 Columns</a></li>
-                        <li><a href="gallery2.html">4 Columns</a></li>
-                        <li><a href="gallery3.html">5 Columns</a></li>
-                     </ul>
-                  </li>
-                  <li class="has-sub">
-                     <a href="javascript:;">Blog</a>
-                     <ul>
-                        <li><a href="blog-left-sidebar.html">Blog Left-sidebar</a></li>
-                        <li><a href="blog-right-sidebar.html">Blog Right-sidebar</a></li>
-                        <li class="has-sub">
-                           <a class="sub-icon">Blog Single</a>
-                           <ul class="m-sub-dropdown">
-                              <li><a href="blog-single.html">Blog single</a></li>
-                              <li><a href="blog-single-slider.html">Blog single slider</a></li>
-                              <li><a href="blog-single-video.html">Blog single video</a></li>
-                           </ul>
-                        </li>
-                     </ul>
-                  </li>
-                  <li class="has-sub">
-                     <a href="javascript:;">Shortcode</a>
-                     <ul>
-                        <li><a href="accordion.html">Accordion</a></li>
-                        <li><a href="client.html">Client</a></li>
-                        <li><a href="counter.html">Counter</a></li>
-                        <li><a href="form.html">Form</a></li>
-                        <li><a href="alert.html">Alert</a></li>
-                        <li><a href="icon.html">Icon</a></li>
-                        <li><a href="list.html">List</a></li>
-                        <li><a href="pricing-table.html">Pricing Table</a></li>
-                        <li><a href="button.html">Button</a></li>
-                        <li><a href="tab.html">Tabs</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="testimonials.html">Testimonial</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="social-icon.html">Social Icon</a></li>
-                     </ul>
-                  </li>
-                  <li><a href="contact-us.html">contact us</a></li>
-                  <li class="border-none"><a href="error404.html">404</a></li>
+                  <li><a href="register.html">Sign Up</a></li>
+                  <li class="border-none"><a href="login.html">Login</a></li>
                   <li class="input-group border-none my-3 mx-2">
                      <input type="text" class="form-control" placeholder="Search">
                      <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
@@ -608,6 +557,34 @@
             document.getElementById("myOverlay").style.display = "none";
          }
       </script>
+         <script src="js/jquery-3.6.0.min.js"></script>
+         <script src="js/bootstrap.min.js"></script>
+         <script src="js/wow.js"></script>
+         <script src="js/jquery.magnific-popup.js"></script>
+         <script src="js/owl.carousel.min.js"></script>
+         <script src="js/custom.js"></script>
+         <!-- custom js-->
+         <script>
+            wow = new WOW(
+               {
+                  animateClass: 'animated',
+                  offset: 100,
+                  callback: function (box) {
+                     console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                  }
+               }
+            );
+            wow.init();
+         </script>
+         <script>
+            function openSearch() {
+               document.getElementById("myOverlay").style.display = "block";
+            }
+      
+            function closeSearch() {
+               document.getElementById("myOverlay").style.display = "none";
+            }
+         </script>
 </body>
 
 </html>
