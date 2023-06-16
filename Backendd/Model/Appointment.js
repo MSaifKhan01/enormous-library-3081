@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../connection/connection");
 
-const AppointmentModle = sequelize.define(
+const AppointmentModel = sequelize.define(
   "Appointment",
   {
     AppointmentID: {
@@ -39,5 +39,5 @@ const AppointmentModle = sequelize.define(
 );
 
 module.exports = {
-  AppointmentModle,
+  AppointmentModel,
 };
