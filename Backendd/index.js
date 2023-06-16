@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors')
 const { userRegister } = require("./Router/Signup");
 const { userrouter } = require("./Router/login&logout");
 const OauthRouter=require('./middleware/Oauth')
@@ -11,15 +12,13 @@ const { Doctor } = require("./Router/DoctorRoute");
 const { UserRouter } = require("./Router/User");
 
 const app = express();
+app.use(cors())  // used for fetch data in frontend
 app.use(cookieParser());
-// app.use(express.json());
-
 app.use(express.json())
 
 
 app.get("/login",(req,res)=>{
-    res.sendFile(__dirname+"/index.html")
-    
+    res.sendFile(__dirname+"/index.html")  
 })
 
 
