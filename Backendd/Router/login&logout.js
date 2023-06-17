@@ -3,7 +3,29 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { logoutModel } = require('../Model/logout');
 const { User } = require('../Model/User');
+const auth=require("../middleware/auth")
 const userrouter = express.Router();
+
+
+userrouter.get("/getUsers", async (req, res) => {
+    try {
+     
+  
+      const users = await User.findAll({});
+  
+      if (!users || users.length === 0) {
+        return res.status(404).send({ msg: "No doctors found" });
+      }
+  
+      res.status(200).send({
+        msg: "users retrieved successfully",
+        users,
+      });
+    } catch (error) {
+      return res.status(500).send({ msg: error.message });
+    }
+  });
+
 
 
 userrouter.post('/login', async (req, res) => {
