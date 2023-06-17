@@ -2,6 +2,7 @@ const express = require("express");
 const { User } = require("../Model/User");
 const { DoctorModel } = require("../Model/Doctor");
 const { AppointmentModel } = require("../Model/Appointment");
+const auth=require("../middleware/auth")
 const Doctor = express.Router();
 
 // const nodemailer = require("nodemailer");
