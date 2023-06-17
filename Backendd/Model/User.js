@@ -5,7 +5,8 @@ const User = sequelize.define("User", {
     name:DataTypes.STRING,
     email:DataTypes.STRING,
     password:DataTypes.STRING,
-    Gender:DataTypes.STRING
+    Gender:DataTypes.STRING,
+    Phone:DataTypes.STRING
    
 });
 

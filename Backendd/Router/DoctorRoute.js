@@ -1,7 +1,10 @@
 const express = require("express");
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 const { User } = require("../Model/User");
 const { DoctorModel } = require("../Model/Doctor");
 const { AppointmentModel } = require("../Model/Appointment");
+const {DoctorlogoutModel}=require("../Model/DoctorLogout")
 const auth=require("../middleware/auth")
 const Doctor = express.Router();
 
@@ -20,6 +23,7 @@ Doctor.post("/register", async (req, res) => {
   const {
     name,
     email,
+    password,
     Gender,
     City,
     State,
@@ -28,6 +32,7 @@ Doctor.post("/register", async (req, res) => {
     Degree,
     Specialty,
     Image,
+    Role,
     About,
   } = req.body;
   try {
@@ -37,27 +42,85 @@ Doctor.post("/register", async (req, res) => {
     if (isDoctorPresent) {
       return res.status(409).send({ msg: "Doctor already exists" });
     }
-    const newDoctor = await DoctorModel.create({
-      name,
-      email,
-      Gender,
-      City,
-      State,
-      Language,
-      Experience,
-      Degree,
-      Specialty,
-      Image,
-      About,
-    });
-    res.status(200).send({
-      msg: "Doctor registration successful. Awaiting admin approval.",
-      newDoctor,
-    });
+    bcrypt.hash(password, 5, async (err, hash) => {
+      if (err) {
+          return res.status(500).send({ msg: err.message });
+      }
+      const newDoctor = await DoctorModel.create({
+        name,
+        email,
+        password:hash,
+        Gender,
+        City,
+        State,
+        Language,
+        Experience,
+        Degree,
+        Specialty,
+        Image,
+        Role,
+        About,
+      });
+      res.status(200).send({ msg: "Registration successful", newDoctor });
+  });
   } catch (error) {
     return res.status(500).send({ msg: error.message });
   }
 });
+
+
+
+Doctor.post('/login', async (req, res) => {
+  const { email, password } = req.body
+
+  const isDoctorPresent = await DoctorModel.findOne({
+      where: {
+          email
+      }
+  })
+
+  if (isDoctorPresent) {
+      bcrypt.compare(password, isDoctorPresent.password, (err, result) => {
+          if (result) {
+              const token = jwt.sign({ userID: isDoctorPresent.id }, "jvd", { expiresIn: "1h" })
+              res.cookie("token", token, { maxAge: 24 * 60 * 60 });
+              console.log(req.cookies.token)
+              res.status(200).send({ msg: "login successful", token })
+          } else {
+              return res.send({ msg: "wrong credentials" })
+          }
+      })
+  } else {
+      return res.status(404).send({ msg: "Not registered need to registration" })
+  }
+});
+
+
+Doctor.post('/logout', async (req, res) => {
+  const token = req.cookies.token;
+  console.log("********************************************************");
+  console.log(token);
+  console.log("********************************************************");
+  if (!token) {
+      return res.status(400).send({ msg: 'No token provided' });
+  }
+  try {
+      const isTokenBlacklisted = await DoctorlogoutModel.findOne({
+          where: { token }
+      });
+      if (!isTokenBlacklisted) {
+          await DoctorlogoutModel.create({ token });
+          res.clearCookie('token');
+          res.status(200).send({ msg: 'Logout successful' });
+      } else {
+          return res.status(401).send({ msg: 'Invalid token' });
+      }
+  } catch (error) {
+      return res.status(500).send({ msg: error.message });
+  }
+});
+
+
 
 // filter doctor with many filer options : //
 
