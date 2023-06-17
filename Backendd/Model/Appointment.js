@@ -23,14 +23,15 @@ const AppointmentModel = sequelize.define(
         key: "id", // key in Target model that we're referencing
       },
     },
+    AppointmentDate: {
+      type: DataTypes.DATEONLY,
+    },
     AppointmentTime: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
     },
-    Status: {
-      type: DataTypes.STRING(20),
-    },
-    ApprovedAt: {
-      type: DataTypes.DATE,
+    status: {
+      type: DataTypes.STRING,
+      defaultValue: "pending",
     },
   },
   {

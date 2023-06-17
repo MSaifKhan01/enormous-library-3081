@@ -110,6 +110,25 @@ Doctor.get("/getDoctors", async (req, res) => {
   }
 });
 
+// get a single doctor //
+
+Doctor.get("/GetSingleDoctor/:doctorId", async (req, res) => {
+  const doctorId = req.params.doctorId;
+  try {
+    const doctor = await DoctorModel.findByPk(doctorId);
+    if (!doctor) {
+      return res.status(404).send({ msg: "Doctor not found" });
+    }
+    
+    res.status(200).send({ msg: "Doctor retrieved successfully", doctor });
+  } catch (error) {
+    return res.status(500).send({ msg: error.message });
+  }
+});
+
+
+
+
 // doctor can see app the appoints accoceted with him //
 Doctor.get("/getAppointments/:doctorId", async (req, res) => {
   const { doctorId } = req.params;
@@ -138,6 +157,7 @@ Doctor.get("/getAppointments/:doctorId", async (req, res) => {
     return res.status(500).send({ msg: error.message });
   }
 });
+
 
 //   !! Admin Only Access !!
 
