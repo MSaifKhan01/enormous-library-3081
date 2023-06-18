@@ -56,8 +56,6 @@
 
 .icon-list {
   list-style-type: none;
-  /* padding: 0; */
-  /* margin-left: 70px; */
   margin-top: 70px;
   display: flex;
   flex-direction: column;
