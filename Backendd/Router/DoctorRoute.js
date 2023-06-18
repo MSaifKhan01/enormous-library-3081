@@ -196,14 +196,14 @@ Doctor.get("/GetSingleDoctor/:doctorId", async (req, res) => {
 // doctor can see app the appoints accoceted with him //
 Doctor.get("/getAppointments/:doctorId", async (req, res) => {
   const { doctorId } = req.params;
-  UserModel.hasMany(AppointmentModel, { foreignKey: "UserID" });
-  AppointmentModel.belongsTo(UserModel, { foreignKey: "UserID" });
+  User.hasMany(AppointmentModel, { foreignKey: "UserID" });
+  AppointmentModel.belongsTo(User, { foreignKey: "UserID" });
   try {
     const appointments = await AppointmentModel.findAll({
       where: { doctorId },
       include: [
         {
-          model: UserModel,
+          model: User,
           required: true,
         },
       ],
@@ -223,7 +223,7 @@ Doctor.get("/getAppointments/:doctorId", async (req, res) => {
 });
 
 
-//   !! Admin Only Access !!
+//   !! Admin Only Access !! 
 
 Doctor.put("/approve/:doctorId", async (req, res) => {
   const doctorId = req.params.doctorId;
@@ -288,7 +288,7 @@ Doctor.put("/update/:doctorId", async (req, res) => {
     Language,
     Experience,
     Degree,
-    image,
+    Image,
     About,
   } = req.body;
 
@@ -307,7 +307,7 @@ Doctor.put("/update/:doctorId", async (req, res) => {
     doctor.Language = Language || doctor.Language;
     doctor.Experience = Experience || doctor.Experience;
     doctor.Degree = Degree || doctor.Degree;
-    doctor.image = image || doctor.image;
+    doctor.image = Image || doctor.Image;
     doctor.About = About || doctor.About;
 
     await doctor.save();
