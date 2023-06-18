@@ -56,9 +56,13 @@
 
 .icon-list {
   list-style-type: none;
-  padding: 0;
-  margin-left: 70px;
+  /* padding: 0; */
+  /* margin-left: 70px; */
   margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-list li {
@@ -93,8 +97,11 @@
 .icon-email {
   display: flex;
   align-items: center;
-  margin-left: 60px;
+  /* margin-left: 60px; */
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-email i {
@@ -121,8 +128,6 @@
 #middle-hello-container > div:nth-child(1) {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: start;
 }
 
 #middle-hello-container h1 {
@@ -315,3 +320,54 @@
 .patient-table td button:hover {
   background-color: #45a049;
 }
+
+#appointmentsDiv{
+  /* background-color: black; */
+  margin-top: 10px;
+  width: 100%;
+  /* margin-left: 5%; */
+  /* margin-right: 5%; */
+  /* height: 130px; */
+}
+
+/* appointment table */
+#appointmentsDiv {
+  overflow: auto;
+  width: 100%;
+}
+
+#appointmentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#appointmentsTable, #appointmentsTable th, #appointmentsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px; /* adjust this as needed */
+}
+
+#appointmentsTable th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#appointmentsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#appointmentsTable td {
+  vertical-align: middle;
+}
+
+/* Add some responsive design */
+@media screen and (max-width: 600px) {
+  #appointmentsTable, #appointmentsTable th, #appointmentsTable td {
+      font-size: 12px;
+      padding: 4px;
+  }
+}
+
+

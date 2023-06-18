@@ -1,0 +1,207 @@
+// footer css start
+.footer-main-wrapper {
+	float: left;
+	width: $my-width;
+	padding: 100px 0px 30px 0;
+	background-image: url('../images/footer-bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: $my-width;
+		height: $my-height;
+		background-color: #0e3340db;
+		z-index: -1;
+	}
+	.sb-footer-section {
+		.footer-logo {
+			padding-bottom: 50px;
+		}
+		ul {
+			li {
+				padding-bottom: 15px;
+				a {
+					display: flex;
+					align-items: center;
+					color: $title-color-white;
+					i {
+						padding-right: 20px;
+					}
+				}
+				.footer-media {
+					display: flex;
+					justify-content: start;
+					li {
+						padding-right: 20px;
+						a {
+							width: 40px;
+							height: 40px;
+							text-align: $align-center;
+							font-size: 18px;
+							line-height: 40px;
+							display: block;
+							border-radius: 50%;
+							position: relative;
+							overflow: hidden;
+							border: 1px solid $title-color-white;
+							z-index: 1;
+							i {
+								padding-right: 0px;
+								position: relative;
+								color: $title-color-white;
+								transition: .5s;
+								z-index: 3;
+							}
+							&::before {
+								content: "";
+								position: absolute;
+								top: 100%;
+								left: 0;
+								width: $my-width;
+								height: $my-height;
+								background: $title-color-hover;
+								-webkit-transition: $transition;
+								-o-transition: $transition;
+								-ms-transition: $transition;
+								-moz-transition: $transition;
+								transition: $transition;
+								z-index: 2;
+							}
+							&:hover {
+								i {
+									color: $title-color-white;
+									transform: rotateY(360deg);
+								}
+								&::before {
+									top: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	h5 {
+		color: $title-color-white;
+		padding-bottom: 20px;
+	}
+	h4 {
+		font-size: $font-size-24;
+		padding-bottom: 25px;
+		color: $title-color-white;
+	}
+	.links {
+		ul {
+			li {
+				padding-bottom: 15px;
+				a {
+					color: $title-color-white;
+					i {
+						padding-right: 10px;
+					}
+					&:hover {
+						color: $title-color-hover;
+					}
+				}
+			}
+		}
+	}
+	.img-link {
+		ul {
+			li {
+				padding-bottom: 25px;
+				img {
+					float: left;
+					padding-right: 15px;
+				}
+				.content {
+					line-height: 18px;
+					p {
+						color: $text-hover-color;
+					}
+					h5 {
+						a {
+							color: $text-hover-color;
+							padding-bottom: 10px;
+							display: inline-block;
+							font-size: $font-size-24;
+						}
+					}
+				}
+			}
+		}
+	}
+	.time-wrapper {
+		display: flex;
+		justify-content: space-between;
+		ul {
+			li {
+				padding-bottom: 10px;
+				color: $title-color-white;
+			}
+		}
+	}
+	#newsletter {
+		margin-top: 25px;
+		h4 {
+			padding-bottom: 15px;
+			padding-top: 15px;
+			color: $title-color-white;
+		}
+		h5 {
+			font-size: $font-size-22;
+		}
+	}
+	section {
+		margin-top: 50px;
+		.container {
+			border-top: 2px solid #516c75;
+		}
+		p {
+			color: $title-color-white;
+			padding-top: 30px;
+			a{
+				color: $title-color-white;
+			}
+		}
+		.last-para {
+			text-align: end;
+		}
+	}
+}
+
+// input box
+.input-box {
+	position: relative;
+	display: inline-block;
+	input {
+		width: 250px;
+		height: 50px;
+		background-color: #516c75;
+		border: none;
+		padding-left: 20px;
+		color: $title-color-white;
+		&::placeholder {
+			font-size: $font-size;
+			color: $title-color-white;
+		}
+	}
+	i {
+		position: absolute;
+		width: 40px;
+		height: 50px;
+		background-color: $title-color-hover;
+		color: $text-hover-color;
+		text-align: $align-center;
+		line-height: 50px;
+		font-size: 20px;
+		right: 0;
+	}
+}
