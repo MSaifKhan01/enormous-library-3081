@@ -64,11 +64,11 @@ form.addEventListener('submit', (e) => {
   const city = document.getElementById('city').value;
   const state = document.getElementById('state').value;
   const language = document.getElementById('language').value;
-  const phone = document.getElementById('phone').value;
   const experience = document.getElementById('experience').value;
   const degree = document.getElementById('degree').value;
   const speciality = document.getElementById('speciality').value;
-  const image = document.getElementById('image').value; // Assuming single file upload
+  const image = document.getElementById('image').value; 
+  const password = document.getElementById('password').value; 
   const about = document.getElementById('about').value;
 
   // Create request body object
@@ -79,11 +79,11 @@ form.addEventListener('submit', (e) => {
     city: city,
     state: state,
     language: language,
-    phone: phone,
     experience: experience,
     degree: degree,
     speciality: speciality,
     image: image,
+    password : password,
     about: about
   };
 
