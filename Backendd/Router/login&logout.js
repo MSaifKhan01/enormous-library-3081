@@ -43,7 +43,7 @@ userrouter.post('/login', async (req, res) => {
                 const token = jwt.sign({ userID: isUserPresent.id }, "jvd", { expiresIn: "1h" })
                 res.cookie("token", token, { maxAge: 24 * 60 * 60 });
                 console.log(req.cookies.token)
-                res.status(200).send({ msg: "login successful", token })
+                res.status(200).send({ msg: "login successful", token ,name:isUserPresent.name })
             } else {
                 return res.send({ msg: "wrong credentials" })
             }
