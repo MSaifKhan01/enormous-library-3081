@@ -75,16 +75,16 @@ form.addEventListener('submit', (e) => {
   const requestBody = {
     name: name,
     email: email,
-    gender: gender,
-    city: city,
-    state: state,
-    language: language,
-    experience: experience,
-    degree: degree,
-    speciality: speciality,
-    image: image,
-    password : password,
-    about: about
+    Gender: gender,
+    City: city,
+    State: state,
+    Language: language,
+    Experience: experience,
+    Degree: degree,
+    Specialty: speciality,
+    About: about,
+    Image: image,
+    password : password
   };
 
   // Make the POST request
