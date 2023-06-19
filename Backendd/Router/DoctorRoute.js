@@ -6,6 +6,7 @@ const { DoctorModel } = require("../Model/Doctor");
 const { AppointmentModel } = require("../Model/Appointment");
 const {DoctorlogoutModel}=require("../Model/DoctorLogout")
 const auth=require("../middleware/auth")
+const { RoleBaseAuth } = require("../middleware/RoleBaseAuth");
 const Doctor = express.Router();
 
 // const nodemailer = require("nodemailer");
@@ -82,7 +83,7 @@ Doctor.post('/login', async (req, res) => {
   if (isDoctorPresent) {
       bcrypt.compare(password, isDoctorPresent.password, (err, result) => {
           if (result) {
-              const token = jwt.sign({ userID: isDoctorPresent.id }, "jvd", { expiresIn: "1h" })
+              const token = jwt.sign({ userID: isDoctorPresent.id ,Role:isDoctorPresent.Role}, "jvd", { expiresIn: "5h" })
               res.cookie("token", token, { maxAge: 24 * 60 * 60 });
               console.log(req.cookies.token)
               res.status(200).send({ msg: "login successful", token })
@@ -124,7 +125,7 @@ Doctor.post('/logout', async (req, res) => {
 
 // filter doctor with many filer options : //
 
-Doctor.get("/getDoctors", async (req, res) => {
+Doctor.get("/getDoctors",auth,RoleBaseAuth(["Admin"]) , async (req, res) => {
   try {
     const { name, Gender, City, State, Language, Experience, Degree } =
       req.query; // Get parameters from query string

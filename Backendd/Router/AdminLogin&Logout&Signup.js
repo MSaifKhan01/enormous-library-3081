@@ -44,7 +44,7 @@ AdminRouter.post('/login', async (req, res) => {
     if (isUserPresent) {
         bcrypt.compare(password, isUserPresent.password, (err, result) => {
             if (result) {
-                const token = jwt.sign({ userID: isUserPresent.id }, "jvd", { expiresIn: "1h" })
+                const token = jwt.sign({ userID: isUserPresent.id,Role:isUserPresent.Role }, "jvd", { expiresIn: "5h" })
                 res.cookie("token", token, { maxAge: 24 * 60 * 60 });
                 console.log(req.cookies.token)
                 res.status(200).send({ msg: "login successful", token })
