@@ -1,37 +1,41 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const { logoutModel } = require('../Model/logout');
-const { User } = require('../Model/User');
-const auth=require("../middleware/auth")
-const userrouter = express.Router();
+const jwt = require('jsonwebtoken');
+
+const { Admin } = require('../Model/Admin');
+const { AdminLogout } = require('../Model/AdminLogout');
+
+const AdminRouter = express.Router();
 
 
-userrouter.get("/getUsers", async (req, res) => {
+AdminRouter.post("/register", async (req, res) => {
+    const { name, email, password, Role } = req.body;
     try {
-     
-  
-      const users = await User.findAll({});
-  
-      if (!users || users.length === 0) {
-        return res.status(404).send({ msg: "No doctors found" });
-      }
-  
-      res.status(200).send({
-        msg: "users retrieved successfully",
-        users,
-      });
+        const isuserpresent = await Admin.findOne({
+            where: { email }
+        });
+        if (isuserpresent) {
+            return res.status(409).send({ msg: "User already exists" });
+        }
+        bcrypt.hash(password, 5, async (err, hash) => {
+            if (err) {
+                return res.status(500).send({ msg: err.message });
+            }
+            const newUser = await Admin.create({ name, email, password: hash, Role });
+            res.status(200).send({ msg: "Registration successful", newUser });
+        });
     } catch (error) {
-      return res.status(500).send({ msg: error.message });
+        return res.status(500).send({ msg: error.message });
     }
-  });
+});
 
 
 
-userrouter.post('/login', async (req, res) => {
+
+AdminRouter.post('/login', async (req, res) => {
     const { email, password } = req.body
 
-    const isUserPresent = await User.findOne({
+    const isUserPresent = await Admin.findOne({
         where: {
             email
         }
@@ -43,7 +47,7 @@ userrouter.post('/login', async (req, res) => {
                 const token = jwt.sign({ userID: isUserPresent.id }, "jvd", { expiresIn: "1h" })
                 res.cookie("token", token, { maxAge: 24 * 60 * 60 });
                 console.log(req.cookies.token)
-                res.status(200).send({ msg: "login successful", token ,name:isUserPresent.name })
+                res.status(200).send({ msg: "login successful", token })
             } else {
                 return res.send({ msg: "wrong credentials" })
             }
@@ -54,7 +58,7 @@ userrouter.post('/login', async (req, res) => {
 });
 
 
-userrouter.post('/logout', async (req, res) => {
+AdminRouter.post('/logout', async (req, res) => {
     const token = req.cookies.token;
     console.log("********************************************************");
     console.log(token);
@@ -63,11 +67,11 @@ userrouter.post('/logout', async (req, res) => {
         return res.status(400).send({ msg: 'No token provided' });
     }
     try {
-        const isTokenBlacklisted = await logoutModel.findOne({
+        const isTokenBlacklisted = await AdminLogout.findOne({
             where: { token }
         });
         if (!isTokenBlacklisted) {
-            await logoutModel.create({ token });
+            await AdminLogout.create({ token });
             res.clearCookie('token');
             res.status(200).send({ msg: 'Logout successful' });
         } else {
@@ -80,6 +84,9 @@ userrouter.post('/logout', async (req, res) => {
 
 
 
-module.exports = {
-    userrouter
-};
+
+
+
+module.exports={
+    AdminRouter
+}

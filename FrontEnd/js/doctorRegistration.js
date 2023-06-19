@@ -67,8 +67,7 @@ form.addEventListener('submit', (e) => {
   const experience = document.getElementById('experience').value;
   const degree = document.getElementById('degree').value;
   const speciality = document.getElementById('speciality').value;
-  const image = document.getElementById('image').value; 
-  const password = document.getElementById('password').value; 
+  const image = document.getElementById('image').value; // Assuming single file upload
   const about = document.getElementById('about').value;
 
   // Create request body object
