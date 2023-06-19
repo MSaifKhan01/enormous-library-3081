@@ -1,10 +1,13 @@
 
-function RoleBaseAuth(permitedRole) {
+const RoleBaseAuth = (role_array) => {
+    //inner function
     return (req, res, next) => {
-        if (permitedRole.includes(req.role)) {
+        const userrole = req.body
+        if(role_array.includes(userrole.Role)){
             next()
-        }else{
-            return res.send("unAuthorised")
+        }
+        else{
+            res.send("not authorised")
         }
     }
 }
