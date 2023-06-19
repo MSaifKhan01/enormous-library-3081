@@ -1,0 +1,121 @@
+.plr {
+	padding: 0px 15px;
+}
+.contact-main-wrapper {
+	float: left;
+	width: $my-width;
+	background-image: url('../images/breadcrumb.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 175px 0;
+	.sb-contact-section {
+		max-width: 380px;
+		display: block;
+		margin: 0 100px 0 auto;
+		h4 {
+			font-weight: $font-weight1;
+		}
+		.breadcrumb {
+			padding-top: 20px;
+			padding-right: 30px;
+			li {
+				color: $body-font;
+				font-size: $font-size-20;
+			}
+		}
+	}
+}
+
+// form section
+.form-main-wrapper {
+	float: left;
+	width: $my-width;
+	padding: 100px 0;
+	section {
+		background: #ebf5f5;
+		padding: 30px;
+		border-radius: 7px;
+		display: flex;
+		justify-content: flex-start;
+		margin-top: 20px;
+		span {
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			line-height: 40px;
+			text-align: $align-center;
+			background: #fff;
+			border-radius: 50px;
+			border: 5px solid #ffd9db;
+			color: $title-color-hover;
+			margin-right: 20px;
+		}
+		h6 {
+			font-weight: $font-weight1;
+			font-size: $font-size-22;
+			line-height: 30px;
+		}
+	}
+}
+.form-section {
+	margin-top: 15px;
+	background-color: $section-bg-color;
+	h6 {
+		background-color: $title-color-hover;
+		padding: 13px 30px;
+		color: $title-color-white;
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
+		font-size: 22px;
+	}
+	
+	.form-input {
+		padding:35px 30px 30px;
+		.input-group-text {
+			color: #707070;
+			background: $title-color-white;
+		}
+		input {
+			height: 50px;
+		}
+		input[type=radio] {
+			height: auto !important;
+		}
+		.form-control:focus {
+			border: 1px solid $border-color;
+			box-shadow: none;
+		}
+		.input-custom{
+			background-color: $bg-color-white;
+			input{
+				position: relative;
+				width: 100%;
+				z-index: 2;
+				background: transparent;
+			}
+			span{
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: 1;
+				cursor: pointer;
+			}
+		}
+	}
+	.checkbox-wrap{
+		display: flex;
+		align-items: center;
+		input{
+			margin-right: 20px;
+		}
+	}
+	.pd-btn{
+		padding: 0 85px;
+		padding-left: 45px;
+	}
+	// input[type="time"]::-webkit-calendar-picker-indicator{
+	// 	appearance: none;
+	// }
+}

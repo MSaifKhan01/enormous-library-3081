@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HealCare - One HealthCare Solutions</title>
+    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,11 +14,13 @@
     <div id="container">
       <div id="wrapper">
         <div id="left-contaier">
-          <img class="doc-img" src="./images/doctor1.jpg" alt="doctor" />
-          <h3>Dr.Hariom Yadav</h3>
-          <div class="icon-email">
-            <i class="fa-solid fa-envelope"></i>
-            <h5 class="email">Hariom@HealCare.com</h5>
+          <div id="left-contaier-doc">
+            <img class="doc-img" src="./images/doctor1.jpg" alt="doctor" />
+            <h3>Dr.Hariom Yadav</h3>
+            <div class="icon-email">
+              <i class="fa-solid fa-envelope"></i>
+              <h5 class="email">Hariom@HealCare.com</h5>
+            </div>
           </div>
           <ul class="icon-list">
             <li>
@@ -42,7 +44,7 @@
         </div>
         <div id="middle-contaier">
           <div id="middle-hello-container">
-            <div>
+            <div id="middle-contaier-info">
               <h1>Hello, Hariom</h1>
               <p>Today is monday, 16 june 2023</p>
             </div>
@@ -64,84 +66,10 @@
             "
           >
             <i class="fa-regular fa-bell"></i>
-            <h3>Resent Appointments</h3>
+            <h3>Resent Pending Appointments</h3>
           </div>
-          <div id="card-section">
-            <div class="card" data-set="${elem._id}">
-              <div class="image-div">
-                <div class="image-left">
-                  <div id="doc-img">
-                    <img src="./images/admin.png" alt="user" />
-                  </div>
-                  <div class="name-info">
-                    <h3>Patient Name</h3>
-                  </div>
-                </div>
-                <div class="menu">
-                  <span>...</span>
-                </div>
-              </div>
-              <div class="InfoImg">
-                <div class="InfoImgMid">
-                  <div>
-                    <p>Healthcare-type</p>
-                    <b>Cardio</b>
-                  </div>
-                  <div>
-                    <p>Age</p>
-                    <b>37 Years</b>
-                  </div>
-                </div>
-                <div class="InfoImgbottom">
-                  <h4>
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>rahul@Bimmar.com</p>
-                  </h4>
-                  <h4>
-                    <i class="fa-sharp fa-solid fa-phone"></i>
-                    <p>898928383</p>
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div class="card" data-set="${elem._id}">
-              <div class="image-div">
-                <div class="image-left">
-                  <div id="doc-img">
-                    <img src="./images/admin.png" alt="user" />
-                  </div>
-                  <div class="name-info">
-                    <h3>Patient Name</h3>
-                  </div>
-                </div>
-                <div class="menu">
-                  <span>...</span>
-                </div>
-              </div>
-              <div class="InfoImg">
-                <div class="InfoImgMid">
-                  <div>
-                    <p>Healthcare-type</p>
-                    <b>Cardio</b>
-                  </div>
-                  <div>
-                    <p>Age</p>
-                    <b>37 Years</b>
-                  </div>
-                </div>
-                <div class="InfoImgbottom">
-                  <h4>
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>rahul@Bimmar.com</p>
-                  </h4>
-                  <h4>
-                    <i class="fa-sharp fa-solid fa-phone"></i>
-                    <p>898928383</p>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <div id="appointmentsDiv"></div>
         </div>
         <div id="right-contaier">
           <div id="right-wrapper">
@@ -149,71 +77,30 @@
               <i class="fa-solid fa-calendar"></i>
               <h2>Calendar</h2>
             </div>
-            <div id="Dates">
-              <p>June 17, 2023</p>
-              <i id="toggleIcon" class="fa-solid fa-arrow-right fa-rotate-90"></i>
+            <div id="approved-clint">
+              <div id="Dates">
+                <p>June 17, 2023</p>
+                <i
+                  id="toggleIcon"
+                  class="fa-solid fa-arrow-right fa-rotate-90"
+                ></i>
+              </div>
+              <table id="patientTable" class="patient-table">
+                <tbody>
+                  <tr>
+                    <td>10:00 AM</td>
+                    <td>John Doe</td>
+                    <td><button class="chat-button">Chat</button></td>
+                  </tr>
+                  <tr>
+                    <td>11:30 AM</td>
+                    <td>Jane Smith</td>
+                    <td><button class="chat-button">Chat</button></td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
             </div>
-            <table id="patientTable" class="patient-table">
-              <tbody>
-                <tr>
-                  <td>10:00 AM</td>
-                  <td>John Doe</td>
-                  <td><button class="chat-button">Chat</button></td>
-                </tr>
-                <tr>
-                  <td>11:30 AM</td>
-                  <td>Jane Smith</td>
-                  <td><button class="chat-button">Chat</button></td>
-                </tr>
-                <!-- Add more rows as needed -->
-              </tbody>
-            </table>
-
-            <div id="Dates">
-              <p>June 18, 2023</p>
-              <i id="toggleIcon" class="fa-solid fa-arrow-right fa-rotate-90"></i>
-            </div>
-            <table id="patientTable" class="patient-table">
-              <!-- <thead>
-                <tr>
-                  <th>Time</th>
-                  <th>Patient Name</th>
-                  <th>Chat</th>
-                </tr>
-              </thead> -->
-              <tbody>
-                <tr>
-                  <td>10:00 AM</td>
-                  <td>John Doe</td>
-                  <td><button class="chat-button">Chat</button></td>
-                </tr>
-                <tr>
-                  <td>11:30 AM</td>
-                  <td>Jane Smith</td>
-                  <td><button class="chat-button">Chat</button></td>
-                </tr>
-                <!-- Add more rows as needed -->
-              </tbody>
-            </table>
-            <div id="Dates">
-              <p>June 19, 2023</p>
-              <i id="toggleIcon" class="fa-solid fa-arrow-right fa-rotate-90"></i>
-            </div>
-            <table id="patientTable" class="patient-table">
-              <tbody>
-                <tr>
-                  <td>10:00 AM</td>
-                  <td>Ramesh Bhai</td>
-                  <td><button class="chat-button">Chat</button></td>
-                </tr>
-                <tr>
-                  <td>11:30 AM</td>
-                  <td>Ram Suresh</td>
-                  <td><button class="chat-button">Chat</button></td>
-                </tr>
-                <!-- Add more rows as needed -->
-              </tbody>
-            </table>
           </div>
         </div>
       </div>
@@ -222,18 +109,19 @@
 </html>
 
 <script defer>
-  document.addEventListener("DOMContentLoaded", function() {
-  var icon = document.getElementById("toggleIcon");
-  var table = document.getElementById("patientTable");
- 
-  console.log(table.style.display);
-  icon.addEventListener("click", function() {
-    if (table.style.display === "table") {
-      table.style.display = "none";
-    } else {
-      table.style.display = "table";
-    }
-  });
-});
+  document.addEventListener("DOMContentLoaded", function () {
+    var icon = document.getElementById("toggleIcon");
+    var table = document.getElementById("patientTable");
 
+    console.log(table.style.display);
+    icon.addEventListener("click", function () {
+      if (table.style.display === "table") {
+        table.style.display = "none";
+      } else {
+        table.style.display = "table";
+      }
+    });
+  });
 </script>
+
+<script src="../FrontEnd/js/doctorDashbord.js"></script>

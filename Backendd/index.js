@@ -11,7 +11,6 @@ const { DoctorModel } = require("./Model/Doctor");
 const { AvailabilityModel } = require("./Model/Availability");
 const { Doctor } = require("./Router/DoctorRoute");
 const { UserRouter } = require("./Router/User");
-const AppointmentRoute = require("./Router/Appointment");
 
 const app = express();
 app.use(cors())  // used for fetch data in frontend
@@ -33,7 +32,6 @@ app.use("/user", userrouter ); // login & logout
 app.use("/admin", AdminRouter);
 app.use("/user",UserRouter)
 app.use("/doctor",Doctor);
-app.use("/appointment",AppointmentRoute);
 
 sequelize.sync().then(()=>{
     app.listen(3000,async()=>{
