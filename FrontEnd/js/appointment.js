@@ -10,6 +10,7 @@ document.querySelector(".button-btn").addEventListener("click", function (e) {
   const time = document.querySelector('input[type="time"]').value;
 
   const doctorId = localStorage.getItem("AppointmentByDoctorID");
+  console.log(doctorId, userId, token, date, time);
 
   fetch("http://localhost:3000/appointment/register", {
     method: "POST",
@@ -25,7 +26,10 @@ document.querySelector(".button-btn").addEventListener("click", function (e) {
     }),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      alert("Your Appointment has been Registed Successfully");
+      window.location.href = "./index.html";
+    })
     .catch((error) => {
       console.error("Error:", error);
     });

@@ -1,5 +1,5 @@
-let doctorid = localStorage.setItem("doctorId", "1");
 let id = localStorage.getItem("doctorId");
+console.log(id);
 
 function FetchSingleDoc() {
   fetch("http://localhost:3000/doctor/getAppointments/" + id)
@@ -13,7 +13,10 @@ function FetchSingleDoc() {
 function fetchDoctorInfo() {
   fetch("http://localhost:3000/doctor/GetSingleDoctor/" + id)
     .then((res) => res.json())
-    .then((data) => displayDoctorInformation(data.doctor))
+    .then((data) =>{
+      console.log(data);
+      displayDoctorInformation(data.doctor);
+    })
     .catch((error) => {
       console.error(error);
     });

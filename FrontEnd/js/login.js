@@ -41,7 +41,9 @@ function loginUser(event) {
         }, 1000);
         // Redirect to the authenticated page or perform any other action
         console.log("Login successful");
+        
       } else {
+        alert("wrong Credential");
         console.log("Wrong credentials");
       }
     })

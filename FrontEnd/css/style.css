@@ -2685,6 +2685,8 @@ section:hover .hover-type a {
 .founder-main-wrapper .sb-founder-section img {
   display: block;
   margin: auto;
+  width: 250px;
+  height: 300px;
 }
 
 .founder-main-wrapper .sb-founder-section section .bg-change2 {

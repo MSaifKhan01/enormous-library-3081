@@ -70,25 +70,29 @@ form.addEventListener('submit', (e) => {
   const speciality = document.getElementById('speciality').value;
   const image = document.getElementById('image').value; // Assuming single file upload
   const about = document.getElementById('about').value;
+  const password = document.getElementById('password').value;
 
   // Create request body object
   const requestBody = {
     name: name,
     email: email,
-    gender: gender,
-    city: city,
-    state: state,
-    language: language,
-    phone: phone,
-    experience: experience,
-    degree: degree,
-    speciality: speciality,
-    image: image,
-    about: about
+    Gender: gender,
+    City: city,
+    State: state,
+    Language: language,
+    Phone: phone,
+    Experience: experience,
+    Degree: degree,
+    Specialty: speciality,
+    Image: image,
+    password :password,
+    About: about
   };
 
+
+  console.log(requestBody);
   // Make the POST request
-  fetch('http://localhost:3000/doctorRegister', {
+  fetch('http://localhost:3000/doctor/Register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -100,6 +104,7 @@ form.addEventListener('submit', (e) => {
       // Handle response data if needed
       console.log(data);
       alert("Doctor registered successfully");
+      window.location.href = "./doctorLogin.html";
     })
     .catch(error => {
       // Handle error if needed
